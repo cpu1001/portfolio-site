@@ -6,11 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vladislav Stanković : Front-End Developer</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
+    <!-- Header / Nav -->
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <!---->
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about.html" class="nav-link">About Me</a>
+            <a href="/work.html" class="nav-link">My Work</a>
+            <a href="/contact.html" class="nav-link contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
     <!-- Showcase -->
-    <header id="showcase" class="grid">
+    <section id="showcase" class="grid">
       <div class="bg-image"></div>
       <div class="content-wrap">
         <h1>
@@ -24,7 +50,7 @@
         </p>
         <a href="#section-b" class="btn">My work</a>
       </div>
-    </header>
+    </section>
 
     <!-- MAIN AREA -->
     <main id="main">
@@ -126,5 +152,7 @@
       <div>Made with CSS grid</div>
       <div>Project by <a href="#"> WebJedi</a></div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

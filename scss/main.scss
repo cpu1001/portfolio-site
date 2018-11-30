@@ -1,7 +1,15 @@
+@import "config";
+@import "menu";
+
 /* Core Styling */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #333;
@@ -25,6 +33,12 @@ p {
   padding: 1em 0;
 }
 
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
 .btn {
   display: inline-block;
   border: 1px solid;
@@ -35,6 +49,7 @@ p {
   &:hover {
     background-color: aquamarine;
     color: #333;
+    @include easeOut();
   }
 }
 
@@ -58,6 +73,8 @@ p {
   }
 }
 
+/* Section A */
+
 #section-a {
   .content-wrap {
     padding: 0 1em;
@@ -66,8 +83,6 @@ p {
   color: #333;
   padding-bottom: 2em;
 }
-
-/* Section A */
 
 /* Section B */
 
