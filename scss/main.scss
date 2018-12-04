@@ -62,6 +62,21 @@ header {
 
 /* Header */
 
+.itsme {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 18vh 0 0 0;
+}
+
+.photo {
+  grid-column: 1;
+  border-radius: 50%;
+  width: 4.2em;
+  border: 10px solid rgba(100, 200, 200, 0.5);
+  position: relative;
+  display: inline-block;
+}
+
 #showcase {
   //min-height: 450px;
   height: 100%;
@@ -82,16 +97,19 @@ header {
     z-index: -1;
     opacity: 0.4;
   }
+
   .content-wrap {
-    padding: 0 1em;
-    font-size: 5rem;
+    padding: 3em 1em 0 1em;
+    font-size: 3rem;
     h1 {
+      grid-column: 2/4;
       text-align: left;
       color: #000;
-      padding: 10vh 0;
+      padding: 0;
+      margin: 0;
     }
     small {
-      font-size: 0.5em;
+      font-size: 0.3em;
     }
   }
 
