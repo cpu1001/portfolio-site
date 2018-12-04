@@ -1,20 +1,27 @@
 @import "config";
 @import "menu";
+@import "paralax";
 
 /* Core Styling */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   margin: 0;
-  height: 100%;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  background-color: #333;
+
+  background-color: #fff;
   color: #fff;
   font-size: 1.1em;
+  font-family: $font;
   line-height: 1.5;
   text-align: center;
 }
@@ -56,20 +63,44 @@ header {
 /* Header */
 
 #showcase {
-  min-height: 450px;
+  //min-height: 450px;
+  height: 100%;
+  min-height: 660px;
+  position: relative;
+  display: grid;
+  grid-column: 1fr 1fr 1fr 1fr;
   .bg-image {
     position: absolute;
-    background: #333 url("../img/showcasebg.jpg");
+    background-image: url("../img/showcasebg2.jpg");
     background-position: center;
     background-repeat: none;
     background-size: cover;
-    width: 100%;
-    height: 450px;
+    filter: blur(5px);
+    width: 120%;
+    height: 130%;
+    margin: -10% 0 0 -10%;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
   }
   .content-wrap {
     padding: 0 1em;
+    font-size: 5rem;
+    h1 {
+      text-align: left;
+      color: #000;
+      padding: 10vh 0;
+    }
+    small {
+      font-size: 0.5em;
+    }
+  }
+
+  .coffee {
+    width: 40%;
+    min-width: 600px;
+    min-height: 400px;
+    margin: 16vh 0 0 37vw;
+    position: absolute;
   }
 }
 
@@ -166,5 +197,42 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1em;
+  }
+}
+
+// Animiran scroll - Showcase
+
+.mouse {
+  max-width: 2.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.scroll {
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform, opacity;
+  opacity: 1;
+}
+
+.scroll-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes scroll {
+  0%,
+  20% {
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0;
   }
 }

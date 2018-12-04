@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     @include easeOut;
   }
 
@@ -23,12 +23,15 @@
     .btn-line {
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: #fff;
       }
       &:nth-child(2) {
         opacity: 0;
+        background: #fff;
       }
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background: #fff;
       }
     }
   }
@@ -43,16 +46,6 @@
   opacity: 0.9;
   visibility: hidden;
   font-size: 1.2em;
-  a {
-    color: #fff;
-    display: block;
-    margin-bottom: 1em;
-    text-decoration: none;
-    &.contact {
-      position: fixed;
-      bottom: 15vh;
-    }
-  }
 
   &.show {
     visibility: visible;
@@ -75,7 +68,7 @@
     right: 0;
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background-color: rgba(black, 0.9);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     @include easeOut;
@@ -94,5 +87,52 @@
   }
   &.show {
     transform: translate3d(0, 0, 0);
+  }
+
+  .nav-item {
+    transform: translate3d(500px, 0, 0);
+    opacity: 0;
+    @include easeOut;
+    color: #fff;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      @include easeOut;
+    }
+    a {
+      color: #fff;
+      display: block;
+      margin-bottom: 1em;
+      text-decoration: none;
+      // &.contact {
+      //   position: fixed;
+      //   bottom: 15vh;
+      // }
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+  .nav-link {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 1rem;
+    font-weight: 300;
+    color: #fff;
+    @include easeOut;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// deilay for nav items
+
+@for $i from 1 through 4 {
+  .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 1.5s;
   }
 }

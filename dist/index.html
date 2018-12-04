@@ -23,7 +23,6 @@
         <div class="btn-line"></div>
       </div>
       <nav class="menu">
-        <!---->
         <ul class="menu-nav">
           <li class="nav-item">
             <a href="/" class="nav-link">Home</a>
@@ -31,25 +30,51 @@
             <a href="/work.html" class="nav-link">My Work</a>
             <a href="/contact.html" class="nav-link contact">Contact</a>
           </li>
+          <li class="nav-item"></li>
+          <li class="nav-item"></li>
+          <li class="nav-item"></li>
         </ul>
       </nav>
     </header>
 
     <!-- Showcase -->
     <section id="showcase" class="grid">
-      <div class="bg-image"></div>
-      <div class="content-wrap">
-        <h1>
-          Hi, I'm Vladislav <br />
-          <small>I make cool stuff</small>
-        </h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam id
-          perferendis reiciendis. Soluta perferendis blanditiis ex dolores harum
-          cupiditate ratione!
-        </p>
-        <a href="#section-b" class="btn">My work</a>
+      <div class="layer bg-image" id="l1"></div>
+      <div class="layer" id="l2"></div>
+
+      <div class="layer coffee" id="l4">
+        <img src="img/coffee.png" alt="" />
       </div>
+
+      <div id="l3" class="content-wrap layer">
+        <h1>
+          Hi, <br />
+          I'm Vlad. <br />
+          <small>I make cool stuff.</small>
+        </h1>
+      </div>
+
+      <a class="scroll-link" href="#section-b">
+        <svg
+          class="mouse"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 76 130"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <rect
+              width="70"
+              height="118"
+              x="1.5"
+              y="1.5"
+              stroke="#000"
+              stroke-width="3"
+              rx="36"
+            />
+            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000" />
+          </g>
+        </svg>
+      </a>
     </section>
 
     <!-- MAIN AREA -->
@@ -154,5 +179,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/paralax.js"></script>
   </body>
 </html>
