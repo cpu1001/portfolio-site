@@ -122,23 +122,32 @@ header {
   }
 }
 
+#section-a,
+#section-b,
+#section-c,
+#section-d .box {
+  @include borderTop;
+  padding: 1.5em 0 3em 0;
+}
+
 /* Section A */
 
 #section-a {
   .content-wrap {
     padding: 0 1em;
   }
-  background-color: #eaeaea;
+  background-color: #fff;
+  border-top: 2px solid $darker;
   color: #333;
-  padding-bottom: 2em;
 }
 
 /* Section B */
 
 #section-b {
-  background-color: #eaeaea;
+  background-color: #efefef;
   color: #333;
   padding: 2em 1em;
+
   ul {
     list-style: none;
     margin: 0;
