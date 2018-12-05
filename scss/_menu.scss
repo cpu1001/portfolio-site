@@ -9,9 +9,9 @@
   @include easeOut;
 
   .btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
+    width: 32px;
+    height: 4px;
+    margin: 0 0 6px 0;
     background: #000;
     @include easeOut;
   }
@@ -22,7 +22,7 @@
 
     .btn-line {
       &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(7px, 8px);
         background: #fff;
       }
       &:nth-child(2) {

@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   margin: 0;
 
@@ -48,14 +52,21 @@ header {
 
 .btn {
   display: inline-block;
-  border: 1px solid;
+  font-size: 1.1em;
+  border: 3px solid;
   margin: 0.5em 0;
   padding: 0.8em 2em;
-  color: #fff;
+  color: #000;
   text-decoration: none;
+  background-color: transparent;
+  @include easeOut();
+  &.darkBtn {
+    color: #000;
+  }
   &:hover {
-    background-color: aquamarine;
-    color: #333;
+    font-size: 1.15em;
+    background-color: #2690d4;
+    color: #fff;
     @include easeOut();
   }
 }
@@ -149,7 +160,6 @@ header {
   padding: 2em 1em;
 
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -157,6 +167,10 @@ header {
     margin-bottom: 1em;
     background: #fff;
     color: #333;
+    img {
+      max-width: 70px;
+      margin: 1em auto;
+    }
   }
 }
 
@@ -190,7 +204,6 @@ header {
   padding: 2em 1em;
 
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -234,11 +247,25 @@ header {
   .box {
     grid-column: span 2;
   }
-  #section-a .content-text {
-    columns: 2;
-    column-gap: 2em;
-    p {
-      padding-top: 0;
+
+  #section-a {
+    .content-text {
+      font-size: 1.2em;
+      columns: 2;
+      column-gap: 2em;
+      p {
+        padding-top: 0;
+      }
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 1em;
+      padding: 2em 0 3em 0;
+    }
+    h5.gem__title {
+      font-size: 1.1em;
+      padding-top: 0.5em;
     }
   }
   #section-b ul {
