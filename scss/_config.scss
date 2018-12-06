@@ -12,7 +12,8 @@ $home-image: url(../dist/img/showcasebg.jpg);
 @import url("https://fonts.googleapis.com/css?family=Lato");
 $font: "Lato", sans-serif;
 
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+$font-titles: "Montserrat", "Lato", sans-serif;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;

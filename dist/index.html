@@ -1,477 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Vladislav Stanković : Front-End Developer</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    <!-- Header / Nav -->
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Vladislav Stanković : Front-End Developer</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="menu">
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about.html" class="nav-link">About Me</a>
+          <a href="/work.html" class="nav-link">My Work</a>
+          <a href="/contact.html" class="nav-link contact">Contact</a>
+        </li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+        <li class="nav-item"></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Showcase -->
+  <section id="showcase" class="grid">
+    <div class="layer bg-image" id="l1"></div>
+    <div class="layer" id="l2"></div>
+
+    <div class="layer coffee" id="l4">
+      <img src="img/coffee.png" alt="" />
+    </div>
+
+    <div id="l3" class="content-wrap layer">
+      <div class="itsme">
+        <img class="photo" src="img/photo.jpg" alt="" />
+        <h1>
+          Vlad Stanković <br />
+          <small>Front-End Developer / UI Designer</small>
+        </h1>
       </div>
-      <nav class="menu">
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/about.html" class="nav-link">About Me</a>
-            <a href="/work.html" class="nav-link">My Work</a>
-            <a href="/contact.html" class="nav-link contact">Contact</a>
+    </div>
+
+    <a class="scroll-link" href="#section-b">
+      <svg class="mouse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 130" preserveAspectRatio="xMidYMid meet">
+        <g fill="none" fill-rule="evenodd">
+          <rect width="70" height="118" x="1.5" y="1.5" stroke="#000" stroke-width="3" rx="36" />
+          <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000" />
+        </g>
+      </svg>
+    </a>
+  </section>
+
+  <!-- MAIN AREA -->
+  <main id="main">
+    <!-- Section A -->
+    <section id="section-a" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">About me</h2>
+        <ul class="services">
+          <li>
+            <svg class="gem__icon-leaf" xmlns="http://www.w3.org/2000/svg" width="80" height="54" viewBox="0 0 79.4 53.9">
+              <g fill="none" stroke="#1D1D1F" stroke-width="3" stroke-miterlimit="10">
+                <polyline class="leaf-left" points="40.7,3.5 29.2,14.7 34.2,19.2 24.2,28.9 39.7,42.8"></polyline>
+                <polyline class="leaf-right" points="38.7,43.9 55.2,28.9 45.1,19.2 50.2,14.7 39.7,4.6"></polyline>
+                <line class="stem-right" x1="39.7" y1="32.8" x2="45.2" y2="27.9"></line>
+                <line class="stem-left" x1="39.7" y1="32.8" x2="34.1" y2="27.9"></line>
+                <line class="stem" x1="39.7" y1="22.8" x2="39.7" y2="50.8"></line>
+              </g>
+            </svg>
+            <h5 class="gem__title">Product Design</h5>
           </li>
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
-          <li class="nav-item"></li>
+          <li>
+            <svg class="gem__icon-waves" xmlns="http://www.w3.org/2000/svg" width="80" height="54" viewBox="0 0 79.4 53.9">
+              <g fill="none" stroke="#1D1D1F" stroke-width="3" stroke-linejoin="bevel" stroke-miterlimit="10">
+                <path class="wave-1" d="M19.2,18.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"></path>
+                <path class="wave-2" d="M19.2,31.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"></path>
+                <path class="wave-3" d="M19.2,44.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"></path>
+              </g>
+            </svg>
+            <h5 class="gem__title">UX Design</h5>
+          </li>
+          <li>
+            <svg class="gem__icon-wind" xmlns="http://www.w3.org/2000/svg" width="80" height="54" viewBox="0 0 79.4 53.9">
+              <g fill="none" stroke="#1D1D1F" stroke-width="3" stroke-miterlimit="10">
+                <path class="wind-1" d="M57.6,24.3c-0.6-1.2-1-2.6-1-4.1c0-5,4-9,9-9c5,0,9,4,9,9s-4,9-9,9l-61.1,0"></path>
+                <path class="wind-2" d="M42.2,17.4c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9s-2.2,4.9-4.9,4.9H9.6"></path>
+                <path class="wind-3" d="M57.9,41.3c0.6,1.2,1.7,2,3.1,2c1.9,0,3.5-1.6,3.5-3.5s-1.6-3.5-3.5-3.5l-46.4,0"></path>
+              </g>
+            </svg>
+            <h5 class="gem__title">Prototyping</h5>
+          </li>
+          <li>
+            <svg class="gem__icon-mountain" xmlns="http://www.w3.org/2000/svg" width="80" height="54" viewBox="0 0 79.4 53.9">
+              <g fill="none" stroke="#1D1D1F" stroke-width="3" stroke-miterlimit="10">
+                <polygon class="mountain-small" points="32.3,46.5 4.7,46.5 18.5,28.1 32.3,46.5	"></polygon>
+                <polygon class="mountain-big" fill="#ffffff" points="17,46.5 45.8,7.8 74.7,46.5 17,46.5"></polygon>
+                <polyline class="mountain-snow" points="36.7,21.8  40.8,26 45.9,20.9 54.2,29.1 59,24.3 "></polyline>
+              </g>
+            </svg>
+            <h5 class="gem__title">Development</h5>
+          </li>
+          <li>
+            <svg class="gem__icon-fether" xmlns="http://www.w3.org/2000/svg" width="80" height="54" viewBox="0 0 79.4 53.9">
+              <g fill="none" stroke="#1D1D1F" stroke-width="3" stroke-miterlimit="10">
+                <path class="outline-left" d="M39.6,42.3L39.6,42.3c-4.4,0-8.1-3.6-8.1-8.1V13.5c0-4.4,8.1-9.4,8.1-9.4"></path>
+                <path class="outline-right" d="M39.6,42.3c4.4,0,8.1-3.6,8.1-8.1V13.5c0-4.4-8.1-9.4-8.1-9.4H39l-0.7-0.9"></path>
+                <line class="root" x1="39.6" y1="9.7" x2="39.6" y2="50.3"></line>
+                <line class="stroke-right-1" x1="39.7" y1="34.3" x2="47.8" y2="26.2"></line>
+                <line class="stroke-right-2" x1="39.7" y1="24.5" x2="47.8" y2="16.4"></line>
+                <line class="stroke-left-1" x1="39.6" y1="34.3" x2="31.5" y2="26.2"></line>
+                <line class="stroke-left-2" x1="39.6" y1="24.5" x2="31.5" y2="16.4"></line>
+              </g>
+            </svg>
+            <h5 class="gem__title">Team Lead</h5>
+          </li>
         </ul>
-      </nav>
-    </header>
-
-    <!-- Showcase -->
-    <section id="showcase" class="grid">
-      <div class="layer bg-image" id="l1"></div>
-      <div class="layer" id="l2"></div>
-
-      <div class="layer coffee" id="l4">
-        <img src="img/coffee.png" alt="" />
-      </div>
-
-      <div id="l3" class="content-wrap layer">
-        <div class="itsme">
-          <img class="photo" src="img/photo.jpg" alt="" />
-          <h1>
-            Vlad Stanković <br />
-            <small>Front-End Developer / UI Designer</small>
-          </h1>
+        <div class="content-text">
+          <p>
+            I'm a freelance creative front‑end developer with 8+ years of
+            professional experience, based in Leskovac, Serbia.
+          </p>
+          <p>
+            I love working with agencies and brands to help them realise their
+            goal of creating truly outstanding digital experiences.
+          </p>
         </div>
+        <button class="btn">Download Resume</button>
       </div>
-
-      <a class="scroll-link" href="#section-b">
-        <svg
-          class="mouse"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 76 130"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g fill="none" fill-rule="evenodd">
-            <rect
-              width="70"
-              height="118"
-              x="1.5"
-              y="1.5"
-              stroke="#000"
-              stroke-width="3"
-              rx="36"
-            />
-            <circle class="scroll" cx="36.5" cy="31.5" r="4.5" fill="#000" />
-          </g>
-        </svg>
-      </a>
     </section>
 
-    <!-- MAIN AREA -->
-    <main id="main">
-      <!-- Section A -->
-      <section id="section-a" class="grid">
-        <div class="content-wrap">
-          <h2 class="content-title">About me</h2>
-          <ul class="services">
-            <li>
-              <svg
-                class="gem__icon-leaf"
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="54"
-                viewBox="0 0 79.4 53.9"
-              >
-                <g
-                  fill="none"
-                  stroke="#1D1D1F"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                >
-                  <polyline
-                    class="leaf-left"
-                    points="40.7,3.5 29.2,14.7 34.2,19.2 24.2,28.9 39.7,42.8"
-                  ></polyline>
-                  <polyline
-                    class="leaf-right"
-                    points="38.7,43.9 55.2,28.9 45.1,19.2 50.2,14.7 39.7,4.6"
-                  ></polyline>
-                  <line
-                    class="stem-right"
-                    x1="39.7"
-                    y1="32.8"
-                    x2="45.2"
-                    y2="27.9"
-                  ></line>
-                  <line
-                    class="stem-left"
-                    x1="39.7"
-                    y1="32.8"
-                    x2="34.1"
-                    y2="27.9"
-                  ></line>
-                  <line
-                    class="stem"
-                    x1="39.7"
-                    y1="22.8"
-                    x2="39.7"
-                    y2="50.8"
-                  ></line>
-                </g>
-              </svg>
-              <h5 class="gem__title">Product Design</h5>
-            </li>
-            <li>
-              <svg
-                class="gem__icon-waves"
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="54"
-                viewBox="0 0 79.4 53.9"
-              >
-                <g
-                  fill="none"
-                  stroke="#1D1D1F"
-                  stroke-width="3"
-                  stroke-linejoin="bevel"
-                  stroke-miterlimit="10"
-                >
-                  <path
-                    class="wave-1"
-                    d="M19.2,18.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"
-                  ></path>
-                  <path
-                    class="wave-2"
-                    d="M19.2,31.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"
-                  ></path>
-                  <path
-                    class="wave-3"
-                    d="M19.2,44.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"
-                  ></path>
-                </g>
-              </svg>
-              <h5 class="gem__title">UX Design</h5>
-            </li>
-            <li>
-              <svg
-                class="gem__icon-wind"
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="54"
-                viewBox="0 0 79.4 53.9"
-              >
-                <g
-                  fill="none"
-                  stroke="#1D1D1F"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                >
-                  <path
-                    class="wind-1"
-                    d="M57.6,24.3c-0.6-1.2-1-2.6-1-4.1c0-5,4-9,9-9c5,0,9,4,9,9s-4,9-9,9l-61.1,0"
-                  ></path>
-                  <path
-                    class="wind-2"
-                    d="M42.2,17.4c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9s-2.2,4.9-4.9,4.9H9.6"
-                  ></path>
-                  <path
-                    class="wind-3"
-                    d="M57.9,41.3c0.6,1.2,1.7,2,3.1,2c1.9,0,3.5-1.6,3.5-3.5s-1.6-3.5-3.5-3.5l-46.4,0"
-                  ></path>
-                </g>
-              </svg>
-              <h5 class="gem__title">Prototyping</h5>
-            </li>
-            <li>
-              <svg
-                class="gem__icon-mountain"
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="54"
-                viewBox="0 0 79.4 53.9"
-              >
-                <g
-                  fill="none"
-                  stroke="#1D1D1F"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                >
-                  <polygon
-                    class="mountain-small"
-                    points="32.3,46.5 4.7,46.5 18.5,28.1 32.3,46.5	"
-                  ></polygon>
-                  <polygon
-                    class="mountain-big"
-                    fill="#ffffff"
-                    points="17,46.5 45.8,7.8 74.7,46.5 17,46.5"
-                  ></polygon>
-                  <polyline
-                    class="mountain-snow"
-                    points="36.7,21.8  40.8,26 45.9,20.9 54.2,29.1 59,24.3 "
-                  ></polyline>
-                </g>
-              </svg>
-              <h5 class="gem__title">Development</h5>
-            </li>
-            <li>
-              <svg
-                class="gem__icon-fether"
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="54"
-                viewBox="0 0 79.4 53.9"
-              >
-                <g
-                  fill="none"
-                  stroke="#1D1D1F"
-                  stroke-width="3"
-                  stroke-miterlimit="10"
-                >
-                  <path
-                    class="outline-left"
-                    d="M39.6,42.3L39.6,42.3c-4.4,0-8.1-3.6-8.1-8.1V13.5c0-4.4,8.1-9.4,8.1-9.4"
-                  ></path>
-                  <path
-                    class="outline-right"
-                    d="M39.6,42.3c4.4,0,8.1-3.6,8.1-8.1V13.5c0-4.4-8.1-9.4-8.1-9.4H39l-0.7-0.9"
-                  ></path>
-                  <line
-                    class="root"
-                    x1="39.6"
-                    y1="9.7"
-                    x2="39.6"
-                    y2="50.3"
-                  ></line>
-                  <line
-                    class="stroke-right-1"
-                    x1="39.7"
-                    y1="34.3"
-                    x2="47.8"
-                    y2="26.2"
-                  ></line>
-                  <line
-                    class="stroke-right-2"
-                    x1="39.7"
-                    y1="24.5"
-                    x2="47.8"
-                    y2="16.4"
-                  ></line>
-                  <line
-                    class="stroke-left-1"
-                    x1="39.6"
-                    y1="34.3"
-                    x2="31.5"
-                    y2="26.2"
-                  ></line>
-                  <line
-                    class="stroke-left-2"
-                    x1="39.6"
-                    y1="24.5"
-                    x2="31.5"
-                    y2="16.4"
-                  ></line>
-                </g>
-              </svg>
-              <h5 class="gem__title">Team Lead</h5>
-            </li>
-          </ul>
-          <div class="content-text">
-            <p>
-              I'm a freelance creative front‑end developer with 8+ years of
-              professional experience, based in Leskovac, Serbia.
-            </p>
-            <p>
-              I love working with agencies and brands to help them realise their
-              goal of creating truly outstanding digital experiences.
-            </p>
-          </div>
-          <button class="btn">Download Resume</button>
-        </div>
-      </section>
-
-      <!-- Section B -->
-      <section id="section-b" class="grid">
-        <div class="content-wrap">
-          <h2>Technical Skills</h2>
-          <ul>
-            <li>
-              <div class="card">
-                <img src="img/html.png" alt="" />
-
-                <h3 class="card-title">HTML</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/css.png" alt="" />
-
-                <h3 class="card-title">CSS</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/sass.png" alt="" />
-
-                <h3 class="card-title">Sass</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/js.png" alt="" />
-
-                <h3 class="card-title">JavaScript</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/vue.png" alt="" />
-
-                <h3 class="card-title">Vue.js</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/node.png" alt="" />
-
-                <h3 class="card-title">Node.js</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/git.png" alt="" />
-
-                <h3 class="card-title">Git</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/wp.png" alt="" />
-
-                <h3 class="card-title">Wordpress</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/adobe.png" alt="" />
-
-                <h3 class="card-title">Design</h3>
-              </div>
-            </li>
-            <li>
-              <div class="card">
-                <img src="img/unity.png" alt="" />
-
-                <h3 class="card-title">Unity / C#</h3>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Section C -->
-      <section id="section-c" class="grid">
-        <div class="content-wrap">
-          <h2 class="content-title">I handle all your graphic design needs</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
-            beatae aut voluptas deserunt repudiandae delectus dolore esse
-            asperiores sit dolorum!
-          </p>
-        </div>
-      </section>
-
-      <!-- Section D -->
-      <section id="section-d" class="grid">
-        <div class="box">
-          <h2 class="content-title">Let's make something great together.</h2>
-          <p>
-            If you have any interesting project in your mind and looking for a
-            creative designer, just leave me a message and I'll contact you
-            soon.
-          </p>
-          <button class="btn">Contact me</button>
-        </div>
-        <div class="box">
-          <h2 class="content-title">Little Title</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            iusto ipsa, et inventore ea quo aspernatur obcaecati tenetur autem
-            incidunt?
-          </p>
-        </div>
-      </section>
-
-      <!-- Section E -->
-
-      <section id="section-e" class="grid">
+    <!-- Section B -->
+    <section id="section-b" class="grid">
+      <div class="content-wrap">
+        <h2>Technical Skills</h2>
         <ul>
           <li>
             <div class="card">
-              <img src="img/card01.jpg" alt="" />
-              <div class="card-content">
-                <h3 class="card-title">Some title</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam sunt rem dolorum labore recusandae totam. Repellat
-                  deleniti dolor amet quis.
-                </p>
-              </div>
+              <img src="img/html.png" alt="" />
+
+              <h3 class="card-title">HTML</h3>
             </div>
           </li>
           <li>
             <div class="card">
-              <img src="img/card02.jpg" alt="" />
-              <div class="card-content">
-                <h3 class="card-title">Some title</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam sunt rem dolorum labore recusandae totam. Repellat
-                  deleniti dolor amet quis.
-                </p>
-              </div>
+              <img src="img/css.png" alt="" />
+
+              <h3 class="card-title">CSS</h3>
             </div>
           </li>
           <li>
             <div class="card">
-              <img src="img/card03.jpg" alt="" />
-              <div class="card-content">
-                <h3 class="card-title">Some title</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam sunt rem dolorum labore recusandae totam. Repellat
-                  deleniti dolor amet quis.
-                </p>
-              </div>
+              <img src="img/sass.png" alt="" />
+
+              <h3 class="card-title">Sass</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/js.png" alt="" />
+
+              <h3 class="card-title">JavaScript</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/vue.png" alt="" />
+
+              <h3 class="card-title">Vue.js</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/node.png" alt="" />
+
+              <h3 class="card-title">Node.js</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/git.png" alt="" />
+
+              <h3 class="card-title">Git</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/wp.png" alt="" />
+
+              <h3 class="card-title">Wordpress</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/adobe.png" alt="" />
+
+              <h3 class="card-title">Design</h3>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="img/unity.png" alt="" />
+
+              <h3 class="card-title">Unity / C#</h3>
             </div>
           </li>
         </ul>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="main-footer" class="grid">
-      <div class="footer-left">
-        © 2018 <a href="http://vladislav.rs">Vladislav.rs</a> | All rights
-        reserved.
       </div>
-      <div class="footer-right">
-        [ <a href="mailto:contact@vladislav.rs">contact@vladislav.rs</a> ]
-      </div>
-    </footer>
+    </section>
 
-    <script src="js/main.js"></script>
-    <script src="js/paralax.js"></script>
-  </body>
+    <!-- Section C -->
+    <section id="section-c" class="grid">
+      <div class="content-wrap">
+        <h2 class="content-title">I handle all your graphic design needs</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
+          beatae aut voluptas deserunt repudiandae delectus dolore esse
+          asperiores sit dolorum!
+        </p>
+      </div>
+    </section>
+
+    <!-- Section D -->
+    <section id="section-d" class="grid">
+      <div class="box">
+        <h2 class="content-title">Let's make something great together.</h2>
+        <p>
+          If you have any interesting project in your mind and looking for a
+          creative designer, just leave me a message and I'll contact you
+          soon.
+        </p>
+        <button class="btn roundingBtn"><a href="">Contact me</a></button>
+      </div>
+      <div class="box">
+        <h2 class="content-title">Little Title</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+          iusto ipsa, et inventore ea quo aspernatur obcaecati tenetur autem
+          incidunt?
+        </p>
+      </div>
+    </section>
+
+    <!-- Section E -->
+
+    <section id="section-e" class="grid">
+      <ul>
+        <li>
+          <div class="card">
+            <img src="img/card01.jpg" alt="" />
+            <div class="card-content">
+              <h3 class="card-title">Some title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam sunt rem dolorum labore recusandae totam. Repellat
+                deleniti dolor amet quis.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/card02.jpg" alt="" />
+            <div class="card-content">
+              <h3 class="card-title">Some title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam sunt rem dolorum labore recusandae totam. Repellat
+                deleniti dolor amet quis.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="img/card03.jpg" alt="" />
+            <div class="card-content">
+              <h3 class="card-title">Some title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Magnam sunt rem dolorum labore recusandae totam. Repellat
+                deleniti dolor amet quis.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer" class="grid">
+    <div class="footer-left">
+      © 2018 <a href="http://vladislav.rs">Vladislav.rs</a> | All rights
+      reserved.
+    </div>
+    <div class="footer-right">
+      [ <a href="mailto:contact@vladislav.rs">contact@vladislav.rs</a> ]
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/paralax.js"></script>
+</body>
+
 </html>
