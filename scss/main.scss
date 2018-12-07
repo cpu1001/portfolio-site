@@ -81,6 +81,8 @@ header {
     align-items: center;
     justify-content: center;
     &:hover {
+      margin: 1.5em auto;
+      height: 3.8em;
       border-radius: 0%;
       border-color: #000;
       a {
@@ -98,7 +100,7 @@ header {
   }
 
   &:hover {
-    background-color: #2690d4;
+    background-color: $color1;
     color: #fff;
     @include easeOut();
   }
@@ -221,11 +223,15 @@ header {
 
 /* Section D / Boxes */
 
+#section-d {
+  background: rgba($color: #000000, $alpha: 0.5) url("../img/coffee-bg.jpg")
+    center center;
+}
+
 #section-d .box {
   padding: 2em;
-  background-color: #442244;
+
   &:nth-child(odd) {
-    background: #2690d4;
   }
 }
 

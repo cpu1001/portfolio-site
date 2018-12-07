@@ -208,6 +208,8 @@ header {
     align-items: center;
     justify-content: center; }
     .btn.roundingBtn:hover {
+      margin: 1.5em auto;
+      height: 3.8em;
       border-radius: 0%;
       border-color: #000; }
       .btn.roundingBtn:hover a {
@@ -220,7 +222,7 @@ header {
       color: #fff;
       transition: all 0.5s ease-out; }
   .btn:hover {
-    background-color: #2690d4;
+    background-color: #f9b294;
     color: #fff;
     transition: all 0.5s ease-out; }
 
@@ -315,11 +317,11 @@ header {
   background-color: #fff; }
 
 /* Section D / Boxes */
+#section-d {
+  background: rgba(0, 0, 0, 0.5) url("../img/coffee-bg.jpg") center center; }
+
 #section-d .box {
-  padding: 2em;
-  background-color: #442244; }
-  #section-d .box:nth-child(odd) {
-    background: #2690d4; }
+  padding: 2em; }
 
 /* Section e */
 #section-e {
