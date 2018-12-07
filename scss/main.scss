@@ -190,9 +190,21 @@ header {
 /* Section B */
 
 #section-b {
-  background-color: #efefef;
   color: #333;
   padding: 2em 1em;
+
+  .tools-bgimage {
+    position: absolute;
+    background-image: url("../img/tools.jpg");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+  }
 
   ul {
     margin: 0;
@@ -202,6 +214,10 @@ header {
     margin-bottom: 1em;
     background: #fff;
     color: #333;
+    border-radius: 5%;
+    &:hover > img {
+      border: 2px solid #000;
+    }
     img {
       max-width: 70px;
       margin: 1em auto;
