@@ -1,3 +1,5 @@
+@import "config";
+
 .moveaway {
   z-index: -100;
   position: absolute;
@@ -8,6 +10,7 @@
   background: #fff;
   padding: 0;
   margin: 0;
+  position: absolute;
 }
 
 @media (min-width: 43.75em) {
@@ -45,6 +48,7 @@
   height: 1.5em;
   line-height: 1.5;
   position: absolute;
+  z-index: 10;
   right: 2.1em;
   top: 1.8em;
   width: 1.5em;
@@ -53,6 +57,7 @@
 .modal__wrap h2 {
   font-size: 3em;
   text-transform: uppercase;
+  padding-bottom: 0px;
 
   small {
     font-size: 0.6em;
@@ -82,22 +87,31 @@
 
 .modal__wrap p {
   color: #ffd300;
-  text-align: justify;
+  text-align: center;
+  margin: 0.5em;
 }
 
 .modal input,
 .modal textarea {
-  background: transparent;
+
   border: 1px solid #ccc;
   padding: 0.5em 0.7em;
   margin: 0.5em;
   display: inline-block;
-  color: #fff;
+  color: #bbb;
   width: 80%;
+  background-color: #1e1e1e;
 }
 
-.modal input:focus {
-  transform: scale(0.97);
+.modal input,
+.modal textarea {
+
+  @include easeOut;
+
+  &:focus {
+    transform: scale(0.97);
+    @include easeOut;
+  }
 
 }
 
@@ -112,4 +126,11 @@ input:checked~.modal__overlay {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   z-index: 800;
+  overflow: auto;
+}
+
+.formBtn {
+  background: rgba($color: #ffd300, $alpha: 0.9) !important;
+  color: #1e1e1e !important;
+  width: 8em !important;
 }

@@ -23,11 +23,14 @@
     <nav class="menu">
       <ul class="menu-nav">
         <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About Me</a>
-          <a href="#skills" class="nav-link">My Skills</a>
-          <a href="#work" class="nav-link">My Work</a>
-          <a href="/contact.html" class="nav-link contact">Contact</a>
+          <a href="#showcase" class="nav-link">Home</a>
+          <a href="#section-a" class="nav-link">About Me</a>
+          <a href="#section-b" class="nav-link">My Skills</a>
+          <a href="#section-c" class="nav-link">My Work</a>
+
+          <a href="/contact.html" class="nav-link contact">
+            <label for="modal__trigger">Contact me</label>
+          </a>
         </li>
         <li class="nav-item"><i class="fab fa-linkedin x3"></i></li>
         <li class="nav-item"><i class="fab fa-twitter x3"></i></li>
@@ -49,7 +52,8 @@
       <div class="itsme">
         <img class="photo" src="img/photo.jpg" alt="" />
         <h1>
-          Vlad Stanković <br />
+          Vlad <br />
+          Stanković <br />
           <small>Front-End Developer / UI Designer</small>
         </h1>
       </div>
@@ -146,9 +150,9 @@
     <!-- Section B -->
     <section id="section-b" class="grid">
       <div class="tools-bgimage"></div>
-
       <div class="content-wrap">
         <h2>Technical Skills</h2>
+        <hr>
         <ul>
           <li>
             <div class="card">
@@ -209,7 +213,6 @@
           <li>
             <div class="card">
               <img src="img/webpack.png" alt="" />
-
               <h3 class="card-title">Webpack</h3>
             </div>
           </li>
@@ -346,7 +349,7 @@
               <textarea id="form-message" cols="40" rows="8" name="textarea"></textarea>
             </div>
 
-            <div><input type="submit" value="Submit" /></div>
+            <div><input class="formBtn" type="submit" value="Submit" /></div>
           </form>
         </div>
       </div>

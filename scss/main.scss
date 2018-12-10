@@ -1,118 +1,9 @@
+@import "core";
 @import "config";
 @import "menu";
 @import "paralax";
 @import "modal";
 
-/* Core Styling */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-body {
-  margin: 0;
-
-  background-color: #fff;
-  color: #fff;
-  font-size: 1.1em;
-  font-family: $font;
-  line-height: 1.5;
-  text-align: center;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 1em 0;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  font-size: 1.1em;
-  border: 3px solid;
-  margin: 0.5em 0;
-  padding: 0.8em 2em;
-  color: #000;
-  text-decoration: none;
-  background-color: transparent;
-  @include easeOut();
-
-  &.darkBtn {
-    color: #000;
-  }
-
-  &.roundingBtn {
-    color: #fff;
-    grid-column: 2/4;
-    height: 6.8em;
-    width: 6.8em;
-    font-size: 2.2em;
-    padding: 0;
-    margin: 1em auto;
-    font-weight: bold;
-    font-family: $font-titles;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      margin: 2.5em auto;
-      height: 3.8em;
-      border-radius: 0%;
-      border-color: #000;
-
-      a {
-        color: #000;
-        @include easeOut;
-      }
-    }
-
-    &>a {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-      @include easeOut;
-    }
-  }
-
-  &:hover {
-    background-color: $color1;
-    color: #fff;
-    @include easeOut();
-  }
-}
 
 /* Header */
 
@@ -158,7 +49,7 @@ header {
     font-size: 3rem;
 
     h1 {
-      grid-column: 2/4;
+      grid-column: 2/5;
       text-align: left;
       color: #000;
       padding: 0;
@@ -174,7 +65,7 @@ header {
     width: 40%;
     min-width: 600px;
     min-height: 400px;
-    margin: 16vh 0 0 37vw;
+    margin: 16vh 0 0 33vw;
     position: absolute;
   }
 }
@@ -202,20 +93,25 @@ header {
 /* Section B */
 
 #section-b {
-  color: #333;
-  padding: 2em 1em;
+  color: #fff;
+  padding: 0;
+
 
   .tools-bgimage {
+    filter: blur(3px);
     position: absolute;
+    z-index: -1;
+    width: 120%;
+    height: 130%;
+    margin: -10% 0 0 -10%;
     background-color: #000;
     background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    filter: blur(3px);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2');
+
+
   }
 
   ul {
@@ -315,12 +211,51 @@ header {
 
 /* Media Queries */
 
-@media (min-width: 550px) {
+@media (max-width: 699px) {
+
+  #showcase {
+
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+
+    .content-wrap {
+      padding: 1em 0 0 1em;
+      font-size: 3rem;
+      min-width: 500px;
+
+      h1 {
+        grid-column: 1/5;
+      }
+
+      small {
+        font-size: 0.35em;
+      }
+    }
+
+    .coffee {
+      margin: 10vh 0 0 15vw;
+
+    }
+  }
+
+
+  .itsme {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    img {
+      display: none;
+    }
+
+    h1 {
+      grid-column: 1/5;
+    }
+  }
+
+
   #section-a {
     .content-text {
       font-size: 1.2em;
-      columns: 2;
-      column-gap: 2em;
 
       p {
         padding-top: 0;
@@ -328,20 +263,17 @@ header {
     }
 
     ul {
-
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 1em;
+      min-width: 400px;
       padding: 2em 0 3em 0;
       justify-content: center;
       align-content: center;
-
-
+      text-align: center;
+      display: block;
     }
 
     li {
-      margin: 0.3em;
-      column-span: 1/2;
+      margin: 2em;
+      display: inline-block;
     }
 
     h5.gem__title {
@@ -359,6 +291,13 @@ header {
   #section-b ul,
   #section-e ul {
     grid-column: 1/4;
+  }
+
+
+  #section-b ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
   }
 
 
