@@ -40,6 +40,11 @@ img {
   height: auto;
   display: block; }
 
+hr {
+  margin: 0 auto 2em;
+  width: 10em;
+  border-bottom: 3px solid; }
+
 h1,
 h2,
 h3,
@@ -102,12 +107,11 @@ header {
 
 .menu-btn {
   position: absolute;
-  z-index: 30;
+  z-index: 3;
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-out;
-  }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 32px;
     height: 4px;
@@ -398,20 +402,16 @@ input:checked ~ .modal__overlay {
 /* Section B */
 #section-b {
   color: #fff;
-  padding: 0; }
-  #section-b .tools-bgimage {
-    filter: blur(3px);
-    position: absolute;
-    z-index: -1;
-    width: 120%;
-    height: 130%;
-    margin: -10% 0 0 -10%;
-    background-color: #000;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-attachment: fixed;
-    background-image: url("https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2"); }
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../img/tools.jpg");
+  background-color: #30bced;
+  background-blend-mode: darken; }
+  #section-b .skillset {
+    grid-column: 2/4; }
   #section-b ul {
     margin: 0;
     padding: 0; }
@@ -432,9 +432,6 @@ input:checked ~ .modal__overlay {
       margin: 1em auto;
       transition: all 0.5s ease-out; }
 
-.card-content {
-  padding: 1.5em; }
-
 /* Section C */
 #section-c {
   padding: 2em;
@@ -450,18 +447,6 @@ input:checked ~ .modal__overlay {
   width: 100%; }
 
 /* Section e */
-#section-e {
-  background-color: #efefef;
-  color: #333;
-  padding: 2em 1em; }
-  #section-e ul {
-    margin: 0;
-    padding: 0; }
-  #section-e li {
-    margin-bottom: 1em;
-    background: #fff;
-    color: #333; }
-
 /* Footer  */
 #main-footer {
   background: #000;
@@ -519,14 +504,63 @@ input:checked ~ .modal__overlay {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; }
   .content-wrap,
-  #section-b ul,
-  #section-e ul {
+  #section-b ul {
     grid-column: 1/4; }
   #section-b ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em; } }
+    grid-column-gap: 1em;
+    padding: 0 1em; }
+  #section-b .skillset {
+    grid-column: 1/4; } }
 
+/* Section e */
+#section-e {
+  background-color: #efefef;
+  color: #333;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0em; }
+  #section-e ul {
+    margin: 0;
+    padding: 0; }
+  #section-e li {
+    background: #fff;
+    color: #333;
+    position: relative; }
+
+.card:hover .card-content {
+  height: 100%;
+  background-color: rgba(0, 103, 144, 0.45); }
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 103, 144, 0.424);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: all 0.5s ease-out; }
+  .card-content h3 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+/* WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX 
+ WIDER  THAN 700PX  */
 @media (min-width: 700px) {
   .grid {
     display: grid;
@@ -558,7 +592,7 @@ input:checked ~ .modal__overlay {
   #section-e ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em; }
+    grid-column: 1/5; }
   #main-footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
