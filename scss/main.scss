@@ -8,21 +8,16 @@
 
 .itsme {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  //grid-template-columns: repeat(5, 1fr);
   margin: 18vh 0 0 0;
-}
 
-.photo {
-  grid-column: 1;
-  border-radius: 50%;
-  width: 4.2em;
-  border: 10px solid rgba(100, 200, 200, 0.5);
-  position: relative;
-  display: inline-block;
+  .photo {
+    display: none;
+  }
+
 }
 
 #showcase {
-  //min-height: 450px;
   height: 100%;
   min-height: 660px;
   position: relative;
@@ -44,11 +39,11 @@
   }
 
   .content-wrap {
-    padding: 3em 1em 0 1em;
+    padding: 3em 0.5em 0 0.5em;
     font-size: 3rem;
 
     h1 {
-      grid-column: 2/5;
+      grid-column: 1/5;
       text-align: left;
       color: #000;
       padding: 0;
@@ -80,13 +75,24 @@
 /* Section A */
 
 #section-a {
-  .content-wrap {
-    padding: 0 1em;
-  }
-
   background-color: #fff;
   border-top: 2px solid $darker;
   color: #333;
+
+  .content-wrap {
+    padding: 0 0.5em;
+
+    ul.services {
+      display: flex;
+
+      li {
+
+        margin: 0 0.4em;
+      }
+    }
+  }
+
+
 }
 
 /* Section B */
@@ -110,6 +116,10 @@
   ul {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5em;
+    padding: 0 0.5em;
   }
 
   li {
@@ -148,130 +158,13 @@
 /* Section D / Boxes */
 
 #section-d {
-  background: rgba($color: #000000, $alpha: 1) url("../img/coffee-bg.jpg")
-    center right no-repeat;
-}
+  background: rgba($color: #000000, $alpha: 1) url("../img/coffee-bg.jpg") center right no-repeat;
+  min-height: 25em;
 
-#section-d .box {
-  padding: 2em;
   width: 100%;
-}
-
-/* Section e */
-
-/* Footer  */
-
-#main-footer {
-  background: #000;
-  color: #999;
-  padding: 2em;
-  font-size: 0.8em;
-
-  a {
-    text-decoration: none;
-    // color: #2690d4;
-    color: #ffff99;
-  }
-
-  .footer-left {
-    text-align: left;
-  }
-
-  .footer-right {
-    text-align: right;
-  }
-}
-
-/* Media Queries */
-
-@media (max-width: 699px) {
-  #showcase {
-    display: grid;
-    grid-column: 1fr 1fr 1fr 1fr;
-
-    .content-wrap {
-      padding: 1em 0 0 1em;
-      font-size: 3rem;
-      min-width: 500px;
-
-      h1 {
-        grid-column: 1/5;
-      }
-
-      small {
-        font-size: 0.35em;
-      }
-    }
-
-    .coffee {
-      margin: 10vh 0 0 15vw;
-    }
-  }
-
-  .itsme {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    img {
-      display: none;
-    }
-
-    h1 {
-      grid-column: 1/5;
-    }
-  }
-
-  #section-a {
-    .content-text {
-      font-size: 1.2em;
-
-      p {
-        padding-top: 0;
-      }
-    }
-
-    ul {
-      min-width: 400px;
-      padding: 2em 0 3em 0;
-      justify-content: center;
-      align-content: center;
-      text-align: center;
-      display: block;
-    }
-
-    li {
-      margin: 2em;
-      display: inline-block;
-    }
-
-    h5.gem__title {
-      font-size: 1.1em;
-      padding-top: 0.5em;
-    }
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .content-wrap,
-  #section-b ul {
-    grid-column: 1/4;
-  }
-
-  #section-b {
-    ul {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 1em;
-      padding: 0 1em;
-    }
-
-    .skillset {
-      grid-column: 1/4;
-    }
-  }
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Section e */
@@ -309,6 +202,7 @@
   width: 100%;
   height: 0;
   @include easeOut;
+
   h3 {
     color: white;
     // font-size: 20px;
@@ -322,6 +216,40 @@
   }
 }
 
+/* Footer  */
+
+#main-footer {
+  background: #000;
+  color: #999;
+  padding: 2em;
+  font-size: 0.8em;
+
+  a {
+    text-decoration: none;
+    // color: #2690d4;
+    color: #ffff99;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+}
+
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* SMALLER THAN 450px; */
+
+@media (max-width: 500px) {}
+
+
+
 /* WIDER  THAN 700PX 
  WIDER  THAN 700PX 
  WIDER  THAN 700PX 
@@ -333,6 +261,17 @@
  WIDER  THAN 700PX  */
 
 @media (min-width: 700px) {
+
+  .photo {
+    grid-column: 1;
+    border-radius: 50%;
+    width: 4.2em;
+    border: 10px solid rgba(100, 200, 200, 0.5);
+    position: relative;
+    display: inline-block;
+  }
+
+
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
@@ -417,6 +356,7 @@
 }
 
 @keyframes scroll {
+
   0%,
   20% {
     transform: translateY(0) scaleY(1);

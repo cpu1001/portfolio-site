@@ -337,16 +337,9 @@ input:checked ~ .modal__overlay {
 /* Header */
 .itsme {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   margin: 18vh 0 0 0; }
-
-.photo {
-  grid-column: 1;
-  border-radius: 50%;
-  width: 4.2em;
-  border: 10px solid rgba(100, 200, 200, 0.5);
-  position: relative;
-  display: inline-block; }
+  .itsme .photo {
+    display: none; }
 
 #showcase {
   height: 100%;
@@ -367,10 +360,10 @@ input:checked ~ .modal__overlay {
     z-index: -1;
     opacity: 0.4; }
   #showcase .content-wrap {
-    padding: 3em 1em 0 1em;
+    padding: 3em 0.5em 0 0.5em;
     font-size: 3rem; }
     #showcase .content-wrap h1 {
-      grid-column: 2/5;
+      grid-column: 1/5;
       text-align: left;
       color: #000;
       padding: 0;
@@ -397,7 +390,11 @@ input:checked ~ .modal__overlay {
   border-top: 2px solid #242424;
   color: #333; }
   #section-a .content-wrap {
-    padding: 0 1em; }
+    padding: 0 0.5em; }
+    #section-a .content-wrap ul.services {
+      display: flex; }
+      #section-a .content-wrap ul.services li {
+        margin: 0 0.4em; }
 
 /* Section B */
 #section-b {
@@ -414,7 +411,11 @@ input:checked ~ .modal__overlay {
     grid-column: 2/4; }
   #section-b ul {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5em;
+    padding: 0 0.5em; }
   #section-b li {
     margin-bottom: 1em;
     background: #fff;
@@ -440,79 +441,12 @@ input:checked ~ .modal__overlay {
 
 /* Section D / Boxes */
 #section-d {
-  background: black url("../img/coffee-bg.jpg") center right no-repeat; }
-
-#section-d .box {
-  padding: 2em;
-  width: 100%; }
-
-/* Section e */
-/* Footer  */
-#main-footer {
-  background: #000;
-  color: #999;
-  padding: 2em;
-  font-size: 0.8em; }
-  #main-footer a {
-    text-decoration: none;
-    color: #ffff99; }
-  #main-footer .footer-left {
-    text-align: left; }
-  #main-footer .footer-right {
-    text-align: right; }
-
-/* Media Queries */
-@media (max-width: 699px) {
-  #showcase {
-    display: grid;
-    grid-column: 1fr 1fr 1fr 1fr; }
-    #showcase .content-wrap {
-      padding: 1em 0 0 1em;
-      font-size: 3rem;
-      min-width: 500px; }
-      #showcase .content-wrap h1 {
-        grid-column: 1/5; }
-      #showcase .content-wrap small {
-        font-size: 0.35em; }
-    #showcase .coffee {
-      margin: 10vh 0 0 15vw; }
-  .itsme {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; }
-    .itsme img {
-      display: none; }
-    .itsme h1 {
-      grid-column: 1/5; }
-  #section-a .content-text {
-    font-size: 1.2em; }
-    #section-a .content-text p {
-      padding-top: 0; }
-  #section-a ul {
-    min-width: 400px;
-    padding: 2em 0 3em 0;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    display: block; }
-  #section-a li {
-    margin: 2em;
-    display: inline-block; }
-  #section-a h5.gem__title {
-    font-size: 1.1em;
-    padding-top: 0.5em; }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
-  .content-wrap,
-  #section-b ul {
-    grid-column: 1/4; }
-  #section-b ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1em;
-    padding: 0 1em; }
-  #section-b .skillset {
-    grid-column: 1/4; } }
+  background: black url("../img/coffee-bg.jpg") center right no-repeat;
+  min-height: 25em;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
 
 /* Section e */
 #section-e {
@@ -552,6 +486,26 @@ input:checked ~ .modal__overlay {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+/* Footer  */
+#main-footer {
+  background: #000;
+  color: #999;
+  padding: 2em;
+  font-size: 0.8em; }
+  #main-footer a {
+    text-decoration: none;
+    color: #ffff99; }
+  #main-footer .footer-left {
+    text-align: left; }
+  #main-footer .footer-right {
+    text-align: right; }
+
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
+/* SMALLER THAN 450px; */
 /* WIDER  THAN 700PX 
  WIDER  THAN 700PX 
  WIDER  THAN 700PX 
@@ -562,6 +516,13 @@ input:checked ~ .modal__overlay {
  WIDER  THAN 700PX 
  WIDER  THAN 700PX  */
 @media (min-width: 700px) {
+  .photo {
+    grid-column: 1;
+    border-radius: 50%;
+    width: 4.2em;
+    border: 10px solid rgba(100, 200, 200, 0.5);
+    position: relative;
+    display: inline-block; }
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr; }
