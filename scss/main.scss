@@ -7,22 +7,25 @@
 /* Header */
 
 .itsme {
-  display: grid;
-  //grid-template-columns: repeat(5, 1fr);
   margin: 18vh 0 0 0;
 
   .photo {
-    display: none;
+    border-radius: 50%;
+    width: 5em;
+    border: 10px solid rgba(100, 200, 200, 0.5);
+    position: relative;
+    display: block;
   }
 
 }
+
+
 
 #showcase {
   height: 100%;
   min-height: 660px;
   position: relative;
-  display: grid;
-  grid-column: 1fr 1fr 1fr 1fr;
+
 
   .bg-image {
     position: absolute;
@@ -41,27 +44,32 @@
   .content-wrap {
     padding: 3em 0.5em 0 0.5em;
     font-size: 3rem;
+    width: 100%;
 
     h1 {
-      grid-column: 1/5;
+      grid-column: 2/5;
       text-align: left;
       color: #000;
       padding: 0;
       margin: 0;
     }
 
-    small {
-      font-size: 0.3em;
+
+    ul.thinker {
+      font-size: 0.6em;
+      color: #000000;
+      grid-column: 1/5;
+      margin-top: 0.4em;
+
+
+      li {
+        display: inline-block;
+        margin: 0.4em 0.2em 0 0.2em;
+      }
     }
   }
 
-  .coffee {
-    width: 40%;
-    min-width: 600px;
-    min-height: 400px;
-    margin: 16vh 0 0 33vw;
-    position: absolute;
-  }
+
 }
 
 #section-a,
@@ -83,11 +91,12 @@
     padding: 0 0.5em;
 
     ul.services {
-      display: flex;
+      text-align: center;
+
 
       li {
-
-        margin: 0 0.4em;
+        display: inline-block;
+        margin: 0.7em;
       }
     }
   }
@@ -172,8 +181,7 @@
 #section-e {
   background-color: #efefef;
   color: #333;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 0em;
+
 
   ul {
     margin: 0;
@@ -189,7 +197,8 @@
 
 .card:hover .card-content {
   height: 100%;
-  background-color: rgba(0, 103, 144, 0.45);
+  background-color: rgba(0, 33, 46, 0.7);
+
 }
 
 .card-content {
@@ -197,7 +206,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 103, 144, 0.424);
+  background-color: rgba(0, 50, 70, 0.424);
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -219,7 +228,8 @@
 /* Footer  */
 
 #main-footer {
-  background: #000;
+  background: #121212;
+  border-top: #212121 1px solid;
   color: #999;
   padding: 2em;
   font-size: 0.8em;
@@ -230,12 +240,18 @@
     color: #ffff99;
   }
 
+  .footer-left,
+  .footer-right {
+    padding: 0.5em 0;
+  }
+
   .footer-left {
     text-align: left;
   }
 
   .footer-right {
     text-align: right;
+
   }
 }
 
@@ -246,7 +262,62 @@
 /* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
 /* SMALLER THAN 450px; */
 
-@media (max-width: 500px) {}
+@media (max-width: 700px) {
+
+  .menu-branding,
+  .menu-nav {
+    width: 100%;
+  }
+
+  .menu-nav {
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  #showcase {
+    margin: 0;
+    padding: 0;
+
+    .content-wrap {
+      width: 100%;
+      display: block;
+      padding: 0;
+
+      h1 {
+        text-align: center;
+        font-size: 1.2em;
+      }
+    }
+
+    .scroll-link {
+      display: none;
+    }
+  }
+
+  .coffee {
+    display: none;
+  }
+
+  .itsme {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin: 10vh 0 0 0;
+  }
+
+  .photo {
+    margin: 0 auto;
+    position: absolute;
+  }
+
+  #main-footer {
+
+    .footer-right,
+    .footer-left {
+      text-align: center;
+    }
+  }
+
+}
 
 
 
@@ -262,15 +333,32 @@
 
 @media (min-width: 700px) {
 
-  .photo {
-    grid-column: 1;
-    border-radius: 50%;
-    width: 4.2em;
-    border: 10px solid rgba(100, 200, 200, 0.5);
-    position: relative;
-    display: inline-block;
+  .itsme {
+
+    margin: 18vh 0 0 0;
+
+    .photo {
+
+      border-radius: 50%;
+      border: 10px solid rgba(100, 200, 200, 0.5);
+      position: relative;
+    }
+
+    h1 {
+      grid-column: 2/5;
+    }
+
+
   }
 
+
+  .coffee {
+    width: 30%;
+    min-width: 600px;
+    min-height: 400px;
+    margin: 16vh 0 0 33vw;
+    position: absolute;
+  }
 
   .grid {
     display: grid;
@@ -330,7 +418,7 @@
   }
 }
 
-// Animiran scroll - Showcase
+// Animiran scroll mouse - Showcase
 
 .mouse {
   max-width: 2.5rem;

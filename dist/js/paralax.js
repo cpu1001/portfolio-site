@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   var parallaxBox = document.getElementById("showcase");
   // var c1left = document.getElementById("l1").offsetLeft,
   //   c1top = document.getElementById("l1").offsetTop,
@@ -18,7 +18,7 @@ window.onload = function() {
     c4left = 1,
     c4top = 1;
 
-  parallaxBox.onmousemove = function(event) {
+  parallaxBox.onmousemove = function (event) {
     event = event || window.event;
     var x = event.clientX - parallaxBox.offsetLeft,
       y = event.clientY - parallaxBox.offsetTop;
@@ -26,7 +26,7 @@ window.onload = function() {
     mouseParallax("l1", c1left, c1top, x, y, 25);
     mouseParallax("l2", c2left, c2top, x, y, 55);
     mouseParallax("l3", c3left, c3top, x, y, 60);
-    mouseParallax("l4", c4left, c4top, x, y, 75);
+    mouseParallax("l4", c4left, c4top, x, y, 85);
   };
 };
 
@@ -38,11 +38,11 @@ function mouseParallax(id, left, top, mouseX, mouseY, speed) {
   obj.style.left =
     left -
     ((mouseX - (parseInt(obj.offsetWidth) / 2 + left)) / containerWidth) *
-      speed +
+    speed +
     "px";
   obj.style.top =
     top -
     ((mouseY - (parseInt(obj.offsetHeight) / 2 + top)) / containerHeight) *
-      speed +
+    speed +
     "px";
 }
