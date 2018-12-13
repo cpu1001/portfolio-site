@@ -1,11 +1,18 @@
-$primary-color: #3a82b9;
+$black: #000;
+$dark: #050505;
+$darker: #242424;
+
+$primary-color: #30bced;
 $secondary-color: #f27280;
+
 $color1: #f9b294;
 $color2: #c16c86;
 $color3: #6d5c7d;
 
-$dark: #050505;
-$darker: #242424;
+$highlight1: #ffff99;
+
+$seeThruDark2: rgba(0, 33, 46, 0.7);
+$seeThruDark1: rgba(0, 50, 70, 0.424);
 
 $thin: 300;
 $normal: 400;
@@ -14,13 +21,10 @@ $bold: 900;
 $home-image: url(../dist/img/showcasebg.jpg);
 
 @import url("https://fonts.googleapis.com/css?family=Lato");
-$font: "Lato",
-sans-serif;
+$font: "Lato", sans-serif;
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-$font-titles: "Montserrat",
-"Lato",
-sans-serif;
+$font-titles: "Montserrat", "Lato", sans-serif;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;

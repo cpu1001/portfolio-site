@@ -16,16 +16,12 @@
     position: relative;
     display: block;
   }
-
 }
-
-
 
 #showcase {
   height: 100%;
   min-height: 660px;
   position: relative;
-
 
   .bg-image {
     position: absolute;
@@ -49,18 +45,16 @@
     h1 {
       grid-column: 2/5;
       text-align: left;
-      color: #000;
+      color: $black;
       padding: 0;
       margin: 0;
     }
 
-
     ul.thinker {
       font-size: 0.6em;
-      color: #000000;
+      color: $black;
       grid-column: 1/5;
       margin-top: 0.4em;
-
 
       li {
         display: inline-block;
@@ -68,8 +62,6 @@
       }
     }
   }
-
-
 }
 
 #section-a,
@@ -84,8 +76,8 @@
 
 #section-a {
   background-color: #fff;
-  border-top: 2px solid $darker;
-  color: #333;
+  @include borderTop;
+  color: $darker;
 
   .content-wrap {
     padding: 0 0.5em;
@@ -93,15 +85,12 @@
     ul.services {
       text-align: center;
 
-
       li {
         display: inline-block;
         margin: 0.7em;
       }
     }
   }
-
-
 }
 
 /* Section B */
@@ -115,7 +104,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-image: url("../img/tools.jpg");
-  background-color: #30bced;
+  background-color: $primary-color;
   background-blend-mode: darken;
 
   .skillset {
@@ -134,7 +123,7 @@
   li {
     margin-bottom: 1em;
     background: #fff;
-    color: #333;
+    color: $darker;
     border-radius: 5%;
     @include easeOut;
 
@@ -160,14 +149,15 @@
 
 #section-c {
   padding: 2em;
-  color: #333;
+  color: $darker;
   background-color: #fff;
 }
 
 /* Section D / Boxes */
 
 #section-d {
-  background: rgba($color: #000000, $alpha: 1) url("../img/coffee-bg.jpg") center right no-repeat;
+  background: rgba($color: $black, $alpha: 1) url("../img/coffee-bg.jpg") center
+    bottom no-repeat;
   min-height: 25em;
 
   width: 100%;
@@ -179,9 +169,9 @@
 /* Section e */
 
 #section-e {
+  @include borderTop;
   background-color: #efefef;
-  color: #333;
-
+  color: $darker;
 
   ul {
     margin: 0;
@@ -190,15 +180,14 @@
 
   li {
     background: #fff;
-    color: #333;
+    color: $darker;
     position: relative;
   }
 }
 
 .card:hover .card-content {
   height: 100%;
-  background-color: rgba(0, 33, 46, 0.7);
-
+  background-color: $seeThruDark1;
 }
 
 .card-content {
@@ -206,7 +195,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 50, 70, 0.424);
+  background-color: $seeThruDark2;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -228,7 +217,7 @@
 /* Footer  */
 
 #main-footer {
-  background: #121212;
+  background: $dark;
   border-top: #212121 1px solid;
   color: #999;
   padding: 2em;
@@ -251,7 +240,6 @@
 
   .footer-right {
     text-align: right;
-
   }
 }
 
@@ -263,16 +251,6 @@
 /* SMALLER THAN 450px; */
 
 @media (max-width: 700px) {
-
-  .menu-branding,
-  .menu-nav {
-    width: 100%;
-  }
-
-  .menu-nav {
-    background-color: rgba(0, 0, 0, 1);
-  }
-
   #showcase {
     margin: 0;
     padding: 0;
@@ -310,16 +288,12 @@
   }
 
   #main-footer {
-
     .footer-right,
     .footer-left {
       text-align: center;
     }
   }
-
 }
-
-
 
 /* WIDER  THAN 700PX 
  WIDER  THAN 700PX 
@@ -332,13 +306,10 @@
  WIDER  THAN 700PX  */
 
 @media (min-width: 700px) {
-
   .itsme {
-
     margin: 18vh 0 0 0;
 
     .photo {
-
       border-radius: 50%;
       border: 10px solid rgba(100, 200, 200, 0.5);
       position: relative;
@@ -347,16 +318,13 @@
     h1 {
       grid-column: 2/5;
     }
-
-
   }
 
-
   .coffee {
-    width: 30%;
+    width: 35%;
     min-width: 600px;
     min-height: 400px;
-    margin: 16vh 0 0 33vw;
+    margin: 17vh 0 0 34vw;
     position: absolute;
   }
 
@@ -444,7 +412,6 @@
 }
 
 @keyframes scroll {
-
   0%,
   20% {
     transform: translateY(0) scaleY(1);
