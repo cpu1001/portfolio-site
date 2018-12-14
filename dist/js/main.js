@@ -10,6 +10,8 @@ let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
 
+navItems.forEach(item => item.addEventListener("click", toggleMenu));
+
 function toggleMenu() {
   if (!showMenu) {
     menuBtn.classList.add("close");

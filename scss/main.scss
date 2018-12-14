@@ -3,6 +3,7 @@
 @import "menu";
 @import "paralax";
 @import "modal";
+@import "galerymodal";
 
 /* Header */
 
@@ -69,7 +70,7 @@
 #section-c,
 #section-d .box {
   @include borderTop;
-  padding: 1.5em 0 3em 0;
+  padding: 2em 0 5em 0;
 }
 
 /* Section A */
@@ -113,7 +114,6 @@
 
   ul {
     margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.5em;
@@ -148,7 +148,6 @@
 /* Section C */
 
 #section-c {
-  padding: 2em;
   color: $darker;
   background-color: #fff;
 }

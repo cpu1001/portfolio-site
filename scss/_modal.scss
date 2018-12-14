@@ -86,7 +86,7 @@
 }
 
 .modal__wrap p {
-  color: #ffd300;
+  color: $highlight1;
   text-align: center;
   margin: 0.5em;
 }
@@ -94,7 +94,7 @@
 .modal input,
 .modal textarea {
   border: 1px solid #ccc;
-  padding: 0.5em 0.7em;
+  padding: 0.8em 1em;
   margin: 0.5em;
   display: inline-block;
   color: #bbb;
@@ -127,8 +127,8 @@ input:checked ~ .modal__overlay {
 }
 
 .formBtn {
-  background: rgba($color: #ffd300, $alpha: 0.9) !important;
-  color: #1e1e1e !important;
+  background: rgba($color: $primary-color, $alpha: 0.9) !important;
+  color: #fff !important;
   width: 8em !important;
 }
 

@@ -135,7 +135,7 @@ header {
   top: 0;
   width: 100%;
   visibility: hidden;
-  font-size: 1.2em; }
+  font-size: 1.3em; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
@@ -148,14 +148,14 @@ header {
     overflow: hidden;
     border-left: 10px solid #242424; }
   .menu-nav {
-    width: 15%;
+    width: 100%;
     position: absolute;
     right: 0;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.9);
     list-style: none;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
@@ -164,49 +164,51 @@ header {
     position: absolute;
     background: #30bced;
     opacity: 0.9;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0);
       transition: all 0.5s ease-out; }
   .menu .nav-item {
-    transform: translate3d(500px, 0, 0);
     opacity: 0;
     transition: all 0.5s ease-out;
     color: #fff; }
     .menu .nav-item.show {
-      transform: translate3d(0, 0, 0);
       opacity: 1;
       transition: all 0.5s ease-out; }
     .menu .nav-item a {
       color: #fff;
       display: block;
-      margin-bottom: 1em;
       text-decoration: none; }
+      .menu .nav-item a hr {
+        border: 1px 0 0 0;
+        border-style: solid;
+        border-color: #ffff99;
+        width: 2em; }
     .menu .nav-item.current > a {
-      color: #f27280; }
+      color: #ffff99; }
   .menu .nav-link {
     position: relative;
     text-transform: uppercase;
-    font-size: 20px;
-    padding: 1rem;
     font-weight: 300;
     color: #fff;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #f27280; }
+      color: #ffff99; }
+    .menu .nav-link li.soc-icons {
+      display: inline-block; }
 
 .nav-item:nth-child(1) {
-  transition-delay: 1.5s; }
+  transition-delay: 0.4s; }
 
 .nav-item:nth-child(2) {
-  transition-delay: 3s; }
+  transition-delay: 0.8s; }
 
 .nav-item:nth-child(3) {
-  transition-delay: 4.5s; }
+  transition-delay: 1.2s; }
 
 .nav-item:nth-child(4) {
-  transition-delay: 6s; }
+  transition-delay: 1.6s; }
 
 @media (max-width: 700px) {
   .menu-branding,
@@ -304,14 +306,14 @@ section#showcase {
       vertical-align: middle; }
 
 .modal__wrap p {
-  color: #ffd300;
+  color: #ffff99;
   text-align: center;
   margin: 0.5em; }
 
 .modal input,
 .modal textarea {
   border: 1px solid #ccc;
-  padding: 0.5em 0.7em;
+  padding: 0.8em 1em;
   margin: 0.5em;
   display: inline-block;
   color: #bbb;
@@ -339,9 +341,19 @@ input:checked ~ .modal__overlay {
   overflow: auto; }
 
 .formBtn {
-  background: rgba(255, 211, 0, 0.9) !important;
-  color: #1e1e1e !important;
+  background: rgba(48, 188, 237, 0.9) !important;
+  color: #fff !important;
   width: 8em !important; }
+
+.galery-popup {
+  background: #ffff99;
+  height: 100%;
+  width: 100%; }
+  .galery-popup h3 {
+    color: #050505;
+    font-size: 3em; }
+  .galery-popup p {
+    color: #050505; }
 
 /* Header */
 .itsme {
@@ -393,7 +405,7 @@ input:checked ~ .modal__overlay {
 #section-c,
 #section-d .box {
   border-top: 2px solid #242424;
-  padding: 1.5em 0 3em 0; }
+  padding: 2em 0 5em 0; }
 
 /* Section A */
 #section-a {
@@ -423,7 +435,6 @@ input:checked ~ .modal__overlay {
     grid-column: 2/4; }
   #section-b ul {
     margin: 0;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 0.5em;
@@ -447,7 +458,6 @@ input:checked ~ .modal__overlay {
 
 /* Section C */
 #section-c {
-  padding: 2em;
   color: #242424;
   background-color: #fff; }
 
