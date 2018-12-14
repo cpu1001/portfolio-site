@@ -63,11 +63,10 @@ function turnOffParalax() {
 const pItems = document.querySelectorAll(".p-item");
 const pClicks = document.querySelectorAll(".pclick");
 
-for (var i = 0, len = pClicks.length; i < len; i++) {
+for (var i = 0; i < pClicks.length; i++) {
   (function(index) {
     pClicks[i].onclick = function() {
       pItems.forEach(item => item.classList.remove("showme"));
-      console.log(index + " evo index");
       pItems[index].classList.add("showme");
     };
   })(i);
