@@ -347,13 +347,26 @@ input:checked ~ .modal__overlay {
 
 .galery-popup {
   background: #ffff99;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  visibility: hidden; }
+  .galery-popup.show {
+    visibility: visible; }
   .galery-popup h3 {
     color: #050505;
     font-size: 3em; }
   .galery-popup p {
     color: #050505; }
+
+.p-item {
+  display: none; }
+
+.showme {
+  display: block; }
 
 /* Header */
 .itsme {

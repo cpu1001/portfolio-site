@@ -1,8 +1,15 @@
 .galery-popup {
   background: $highlight1;
-
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  visibility: hidden;
+  &.show {
+    visibility: visible;
+  }
 
   h3 {
     color: $dark;
@@ -11,4 +18,12 @@
   p {
     color: $dark;
   }
+}
+
+.p-item {
+  display: none;
+}
+
+.showme {
+  display: block;
 }
