@@ -1,36 +1,49 @@
-$black: #000;
-$dark: #050505;
-$darker: #242424;
+$black: #001219;
+$dark: #00364c;
+$darker: #0080b2;
 
-$primary-color: #30bced;
-$secondary-color: #f27280;
+$primary-color: #00b7ff;
+$secondary-color: #ff4800;
 
-$color1: #f9b294;
-$color2: #c16c86;
-$color3: #6d5c7d;
+$color1: #4cccff;
+$color2: #e5f7ff;
+$white: #ffffff;
 
 $highlight1: #ffff99;
 $highlight2: #ffd300;
 
-$seeThruDark2: rgba(0, 33, 46, 0.7);
-$seeThruDark1: rgba(0, 50, 70, 0.424);
+$seeThruDark2: rgba($color: $black, $alpha: 0.7);
+$seeThruDark1: rgba($color: $black, $alpha: 0.4);
 
 $thin: 300;
 $normal: 400;
 $bold: 900;
 
-$home-image: url(../dist/img/showcasebg.jpg);
-
 @import url("https://fonts.googleapis.com/css?family=Lato");
-$font: "Lato", sans-serif;
+$font: "Lato",
+sans-serif;
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-$font-titles: "Montserrat", "Lato", sans-serif;
+$font-titles: "Montserrat",
+"Lato",
+sans-serif;
+
+
+/* MIXINS */
 
 @mixin easeOut {
-  transition: all 0.5s ease-out;
+  transition: all 0.30s ease-out;
 }
 
 @mixin borderTop {
   border-top: 2px solid $darker;
+}
+
+@mixin rotate($speed, $duration) {
+  -webkit-animation: rotating $speed linear $duration;
+  -moz-animation: rotating $speed linear $duration;
+  -ms-animation: rotating $speed linear $duration;
+  -o-animation: rotating $speed linear $duration;
+  animation: rotating $speed linear $duration;
+
 }

@@ -5,28 +5,22 @@
 @import "modal";
 @import "galerymodal";
 
+
 /* Header */
 
-.itsme {
-  margin: 18vh 0 0 0;
 
-  .photo {
-    border-radius: 50%;
-    width: 5em;
-    border: 10px solid rgba(100, 200, 200, 0.5);
-    position: relative;
-    display: block;
-  }
-}
 
 #showcase {
-  height: 100%;
-  min-height: 660px;
+  height: calc(100vh);
   position: relative;
+  background-image: linear-gradient(to top right, #000, $darker);
+  //background-color: $black;
 
   .bg-image {
     position: absolute;
-    background-image: url("../img/showcasebg2.jpg");
+    //background-image: url("../img/showcasebg2.jpg");
+
+    background-blend-mode: darken;
     background-position: center;
     background-repeat: none;
     background-size: cover;
@@ -35,31 +29,51 @@
     height: 130%;
     margin: -10% 0 0 -10%;
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .content-wrap {
-    padding: 3em 0.5em 0 0.5em;
     font-size: 3rem;
     width: 100%;
+    color: $white;
+
+    .itsme {
+      margin: 18vh 0 0 0;
+
+      .photo {
+        border-radius: 50%;
+        width: 5em;
+        border: 10px solid rgba(100, 200, 200, 0.5);
+        position: relative;
+        display: block;
+      }
+    }
 
     h1 {
       grid-column: 2/5;
       text-align: left;
-      color: $black;
+      font-size: 1.6em;
+      line-height: 1.3em;
       padding: 0;
-      margin: 0;
+      margin: 0 0.1em;
+      height: 100%;
+      font-family: Montserrat, sans-serif;
+      font-weight: bold;
     }
 
-    ul.thinker {
-      font-size: 0.6em;
-      color: $black;
+    .thinker {
+      font-size: 0.3em;
+      line-height: 1em;
+      display: block;
+      color: $color1;
+      font-weight: lighter;
       grid-column: 1/5;
-      margin-top: 0.4em;
+      margin-top: 0.5em;
 
       li {
         display: inline-block;
-        margin: 0.4em 0.2em 0 0.2em;
+        margin: 0.4em 0.3em 0 0.3em;
+
       }
     }
   }
@@ -67,10 +81,11 @@
 
 #section-a,
 #section-b,
-#section-c,
-#section-d .box {
+#section-d {
   @include borderTop;
-  padding: 2em 0 5em 0;
+  padding: 3em 0;
+  min-height: calc(100vh);
+
 }
 
 /* Section A */
@@ -78,7 +93,7 @@
 #section-a {
   background-color: #fff;
   @include borderTop;
-  color: $darker;
+  color: $dark;
 
   .content-wrap {
     padding: 0 0.5em;
@@ -94,7 +109,7 @@
   }
 }
 
-/* Section B */
+/* Section B - Skills*/
 
 #section-b {
   color: #fff;
@@ -116,16 +131,20 @@
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 0.5em;
+    column-gap: 1em;
     padding: 0 0.5em;
   }
 
   li {
     margin-bottom: 1em;
     background: #fff;
-    color: $darker;
+    color: $dark;
     border-radius: 5%;
     @include easeOut;
+
+    h3 {
+      padding: 0.3em 0 1em 0;
+    }
 
     &:hover {
       background-color: $color1;
@@ -145,32 +164,14 @@
   }
 }
 
-/* Section C */
+/* Section C - Portfolio */
 
 #section-c {
-  color: $darker;
-  background-color: #fff;
-}
-
-/* Section D / Boxes */
-
-#section-d {
-  background: rgba($color: $black, $alpha: 1) url("../img/coffee-bg.jpg") center
-    bottom no-repeat;
-  min-height: 25em;
-
-  width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-/* Section e */
-
-#section-e {
   @include borderTop;
   background-color: #efefef;
   color: $darker;
+  padding: 0;
+
 
   ul {
     margin: 0;
@@ -202,7 +203,6 @@
 
   h3 {
     color: white;
-    // font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -212,6 +212,43 @@
     text-align: center;
   }
 }
+
+
+/* Section D - Contact */
+
+#section-d {
+  background-image: linear-gradient(to bottom, #000, $darker);
+  min-height: 25em;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  .roundingBtn {
+    color: #fff;
+    grid-column: 2/4;
+    height: 6.8em;
+    width: 6.8em;
+    font-size: 2.2em;
+    padding: 0;
+    margin: 1em auto;
+    font-weight: bold;
+    font-family: $font-titles;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border-radius: 20%;
+      border-color: transparent;
+      color: #000;
+      @include easeOut;
+    }
+  }
+}
+
 
 /* Footer  */
 
@@ -287,6 +324,7 @@
   }
 
   #main-footer {
+
     .footer-right,
     .footer-left {
       text-align: center;
@@ -306,7 +344,7 @@
 
 @media (min-width: 700px) {
   .itsme {
-    margin: 18vh 0 0 0;
+
 
     .photo {
       border-radius: 50%;
@@ -329,12 +367,12 @@
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 27em)) 1fr;
   }
 
   .content-wrap,
   #section-b ul,
-  #section-e ul {
+  #section-c ul {
     grid-column: 2/4;
   }
 
@@ -372,7 +410,7 @@
     grid-column-gap: 1em;
   }
 
-  #section-e ul {
+  #section-c ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1/5;
@@ -411,6 +449,7 @@
 }
 
 @keyframes scroll {
+
   0%,
   20% {
     transform: translateY(0) scaleY(1);
@@ -421,3 +460,202 @@
     opacity: 0;
   }
 }
+
+
+
+/***/
+
+
+
+
+
+/* ROTATING */
+
+/* Rotation */
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// .rotating {
+//   -webkit-animation: rotating 50s linear infinite;
+//   -moz-animation: rotating 50s linear infinite;
+//   -ms-animation: rotating 50s linear infinite;
+//   -o-animation: rotating 50s linear infinite;
+//   animation: rotating 50s linear infinite;
+// }
+
+$slowRotate: 50s;
+$fastRotate: 0.5s;
+$infinite: infinite;
+$once: 1;
+
+
+.square1 {
+  position: absolute;
+  right: calc(-10vh);
+  top: calc(10vh);
+  z-index: -8;
+  width: calc(40vw);
+  height: calc(40vw);
+  line-height: 100px;
+  text-align: center;
+  background-color: $dark;
+  border-radius: 25%;
+  overflow: hidden;
+  @include rotate($slowRotate + 80, $infinite);
+  //animation-direction: reverse;
+  box-shadow: 0 0 70px 0 rgba(0, 162, 255, 0.3);
+}
+
+.square2 {
+  position: absolute;
+  z-index: -8;
+  top: calc(8vh);
+  left: calc(-15vh);
+  width: calc(55vw);
+  height: calc(55vw);
+  background-color: $darker;
+  border-radius: 25%;
+  overflow: hidden;
+  @include rotate($slowRotate, $infinite);
+  box-shadow: 0 0 90px 0 rgba(140, 0, 255, 0.2);
+
+
+}
+
+/* Border animation */
+
+.main_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  width: 15%;
+  height: 3px;
+  background-image: linear-gradient(to right, $color1, #fff);
+  transition: all 2s linear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  &.delay {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+
+  }
+}
+
+
+.top {
+  top: 0;
+  left: 0;
+}
+
+.right {
+  top: 0;
+  right: -7.3%;
+  transform: rotate(90deg);
+}
+
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.left {
+  top: 0;
+  left: -7.3%;
+  transform: rotate(90deg);
+}
+
+@-webkit-keyframes h-move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes h-move {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.top,
+.bottom {
+  -webkit-animation-name: h-move;
+  animation-name: h-move;
+}
+
+@-webkit-keyframes v-move {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes v-move {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+.right,
+.left {
+  -webkit-animation-name: v-move;
+  animation-name: v-move;
+}
+
+
+/* Rotating Square END */

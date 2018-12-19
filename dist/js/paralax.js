@@ -26,7 +26,7 @@ window.onload = function () {
     mouseParallax("l1", c1left, c1top, x, y, 25);
     mouseParallax("l2", c2left, c2top, x, y, 55);
     mouseParallax("l3", c3left, c3top, x, y, 60);
-    mouseParallax("l4", c4left, c4top, x, y, 85);
+    mouseParallax("l4", c4left, c4top, x, y, 60);
   };
 };
 

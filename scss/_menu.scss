@@ -25,10 +25,12 @@
         transform: rotate(45deg) translate(7px, 8px);
         background: #fff;
       }
+
       &:nth-child(2) {
         opacity: 0;
         background: #fff;
       }
+
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
         background: #fff;
@@ -68,7 +70,7 @@
     right: 0;
     margin: 0;
     padding: 0;
-    background-color: rgba(black, 0.9);
+    background-color: $seeThruDark2;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -103,10 +105,12 @@
       opacity: 1;
       @include easeOut;
     }
+
     a {
       color: #fff;
       display: block;
       text-decoration: none;
+
       hr {
         border: 1px 0 0 0;
         border-style: solid;
@@ -115,19 +119,22 @@
       }
     }
 
-    &.current > a {
+    &.current>a {
       color: $highlight1;
     }
   }
+
   .nav-link {
     position: relative;
     text-transform: uppercase;
     font-weight: 300;
     color: #fff;
     @include easeOut;
+
     &:hover {
       color: $highlight1;
     }
+
     li.soc-icons {
       display: inline-block;
     }
@@ -143,6 +150,7 @@
 }
 
 @media (max-width: 700px) {
+
   .menu-branding,
   .menu-nav {
     width: 100%;
