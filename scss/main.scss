@@ -4,6 +4,7 @@
 @import "paralax";
 @import "modal";
 @import "galerymodal";
+@import "bubbles";
 
 
 /* Header */
@@ -18,62 +19,52 @@
 
   .bg-image {
     position: absolute;
-    //background-image: url("../img/showcasebg2.jpg");
+    background-image: url("../img/showcasebg.jpg");
 
     background-blend-mode: darken;
     background-position: center;
     background-repeat: none;
     background-size: cover;
-    filter: blur(5px);
     width: 120%;
     height: 130%;
     margin: -10% 0 0 -10%;
-    z-index: -1;
-    opacity: 0.3;
+    z-index: -10;
+    opacity: 0.1;
   }
 
   .content-wrap {
     font-size: 3rem;
     width: 100%;
     color: $white;
-
-    .itsme {
-      margin: 18vh 0 0 0;
-
-      .photo {
-        border-radius: 50%;
-        width: 5em;
-        border: 10px solid rgba(100, 200, 200, 0.5);
-        position: relative;
-        display: block;
-      }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h1 {
-      grid-column: 2/5;
       text-align: left;
-      font-size: 1.6em;
+      //font-size: 1.8em;
+      font-size: calc(35px + (75 - 35) * ((100vw - 300px) / (1600 - 300)));
       line-height: 1.3em;
-      padding: 0;
-      margin: 0 0.1em;
       height: 100%;
-      font-family: Montserrat, sans-serif;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     .thinker {
-      font-size: 0.3em;
-      line-height: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.4em;
       display: block;
-      color: $color1;
-      font-weight: lighter;
-      grid-column: 1/5;
-      margin-top: 0.5em;
+      line-height: 1.5em;
+      width: auto;
+      color: $highlight1;
+      font-weight: 400;
 
-      li {
-        display: inline-block;
-        margin: 0.4em 0.3em 0 0.3em;
-
+      &::after {
+        width: 3.8em;
+        display: block;
+        margin: 0.5em 0;
+        content: '';
+        border-bottom: 1px solid $highlight1;
       }
     }
   }
@@ -97,6 +88,11 @@
 
   .content-wrap {
     padding: 0 0.5em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
     ul.services {
       text-align: center;
@@ -123,8 +119,17 @@
   background-color: $primary-color;
   background-blend-mode: darken;
 
+  .myicon {
+    width: calc(80px + (160 - 80) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(54px + (108 - 54) * ((100vw - 300px) / (1600 - 300)));
+
+    &::before {}
+  }
+
   .skillset {
-    grid-column: 2/4;
+    //grid-column: 2/4;
+    padding: 3em 0;
+
   }
 
   ul {
@@ -292,23 +297,32 @@
     padding: 0;
 
     .content-wrap {
-      width: 100%;
-      display: block;
-      padding: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
 
       h1 {
         text-align: center;
-        font-size: 1.2em;
+        line-height: 1.5em;
+        margin-bottom: 5em;
       }
+
+      .thinker {
+        font-size: 0.5em;
+
+        &::after {
+          margin: 0.5em auto;
+        }
+
+      }
+
     }
 
     .scroll-link {
-      display: none;
+      //display: none;
     }
-  }
-
-  .coffee {
-    display: none;
   }
 
   .itsme {
@@ -357,13 +371,6 @@
     }
   }
 
-  .coffee {
-    width: 35%;
-    min-width: 600px;
-    min-height: 400px;
-    margin: 17vh 0 0 34vw;
-    position: absolute;
-  }
 
   .grid {
     display: grid;
@@ -382,9 +389,11 @@
 
   #section-a {
     .content-text {
-      font-size: 1.2em;
-      columns: 2;
-      column-gap: 2em;
+      font-size: 1.4em;
+      text-align: left;
+
+      //columns: 2;
+      //column-gap: 2em;
 
       p {
         padding-top: 0;
@@ -398,8 +407,9 @@
       padding: 2em 0 3em 0;
     }
 
-    h5.gem__title {
-      font-size: 1.1em;
+    h5.le-title {
+      font-size: 1.3em;
+      font-weight: 500;
       padding-top: 0.5em;
     }
   }
@@ -533,7 +543,7 @@ $once: 1;
   overflow: hidden;
   @include rotate($slowRotate + 80, $infinite);
   //animation-direction: reverse;
-  box-shadow: 0 0 70px 0 rgba(0, 162, 255, 0.3);
+  box-shadow: 0 0 80px 0 rgba(0, 162, 255, 0.7);
 }
 
 .square2 {
@@ -547,7 +557,7 @@ $once: 1;
   border-radius: 25%;
   overflow: hidden;
   @include rotate($slowRotate, $infinite);
-  box-shadow: 0 0 90px 0 rgba(140, 0, 255, 0.2);
+  box-shadow: 0 0 120px 0 rgba(0, 8, 121, 0.3);
 
 
 }
@@ -558,7 +568,7 @@ $once: 1;
   width: 100%;
   height: 100%;
   position: relative;
-
+  border-radius: 25%;
 }
 
 .bar {
@@ -574,6 +584,7 @@ $once: 1;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  box-shadow: 0 0 20px 0 rgba(40, 212, 255, 0.6);
 
   &.delay {
     animation-delay: 1s;
@@ -657,5 +668,39 @@ $once: 1;
   animation-name: v-move;
 }
 
+
+@-webkit-keyframes pulsing {
+  0% {
+    box-shadow: 0 0 10px 0;
+  }
+
+  100% {
+    box-shadow: 0 0 180px 0;
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    box-shadow: 0 0 50px 0 rgba(0, 162, 255, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 120px 0 rgba(0, 162, 255, 0.7);
+  }
+}
+
+.square12,
+.square22 {
+  -webkit-animation-name: pulsing;
+  animation-name: pulsing;
+  transition: all 2s linear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+}
 
 /* Rotating Square END */

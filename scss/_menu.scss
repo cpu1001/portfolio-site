@@ -12,7 +12,8 @@
     width: 32px;
     height: 4px;
     margin: 0 0 6px 0;
-    background: #000;
+    background-image: linear-gradient(to bottom, $primary-color, $color1);
+    background-blend-mode: exclusion;
     @include easeOut;
   }
 

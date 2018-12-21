@@ -46,21 +46,32 @@ img {
 hr {
   margin: 0 auto 2em;
   width: 10em;
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
 }
 
 h1,
 h2,
 h3,
-p {
+  {
   margin: 0;
-  padding: 1em 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+p {
+  padding-bottom: 0.6em;
 }
 
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
+}
+
+.content-title {
+  font-size: 3em;
+  font-family: $font-titles;
+  font-weight: 400;
 }
 
 .btn {
