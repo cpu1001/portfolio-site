@@ -76,11 +76,10 @@ header {
 
 .btn {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.3em;
   border: 3px solid;
   margin: 0.5em 0;
   padding: 0.8em 2em;
-  color: #000;
   text-decoration: none;
   background-color: transparent;
   @include easeOut();
@@ -89,11 +88,14 @@ header {
     color: #000;
   }
 
-
+  &.btn-resume {
+    color: $dark;
+    border-color: $dark;
+    margin: 2.5em auto;
+  }
 
   &:hover {
     background-color: $color1;
-    color: #000;
     @include easeOut();
   }
 }

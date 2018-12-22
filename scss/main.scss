@@ -4,7 +4,7 @@
 @import "paralax";
 @import "modal";
 @import "galerymodal";
-@import "bubbles";
+@import "cardflip";
 
 
 /* Header */
@@ -119,6 +119,11 @@
   background-color: $primary-color;
   background-blend-mode: darken;
 
+  .content-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .myicon {
     width: calc(80px + (160 - 80) * ((100vw - 300px) / (1600 - 300)));
     height: calc(54px + (108 - 54) * ((100vw - 300px) / (1600 - 300)));
@@ -132,6 +137,14 @@
 
   }
 
+  .skills-holder {
+
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+  }
+
   ul {
     margin: 0;
     display: grid;
@@ -142,7 +155,7 @@
 
   li {
     margin-bottom: 1em;
-    background: #fff;
+    background: $color2;
     color: $dark;
     border-radius: 5%;
     @include easeOut;

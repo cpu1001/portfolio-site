@@ -68,19 +68,21 @@ header {
 
 .btn {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.3em;
   border: 3px solid;
   margin: 0.5em 0;
   padding: 0.8em 2em;
-  color: #000;
   text-decoration: none;
   background-color: transparent;
   transition: all 0.30s ease-out; }
   .btn.darkBtn {
     color: #000; }
+  .btn.btn-resume {
+    color: #00364c;
+    border-color: #00364c;
+    margin: 2.5em auto; }
   .btn:hover {
     background-color: #4cccff;
-    color: #000;
     transition: all 0.30s ease-out; }
 
 /* MIXINS */
@@ -349,27 +351,68 @@ input:checked ~ .modal__overlay {
 .showme {
   display: block; }
 
-.particletext {
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.30s ease-out; }
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover {
+  transform: rotateY(180deg);
+  transition: all 0.30s ease-out; }
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.thefront {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000; }
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
   text-align: center;
-  font-size: 48px;
-  position: relative; }
-  .particletext.bubbles > .particle {
-    opacity: 0;
-    position: absolute;
-    background-color: rgba(33, 150, 243, 0.5);
-    animation: bubbles 3s ease-in infinite;
-    border-radius: 100%; }
+  transform: rotateY(180deg); }
 
-@keyframes bubbles {
-  0% {
-    opacity: 0; }
-  20% {
-    opacity: 1;
-    transform: translate(0, -20%); }
-  100% {
-    opacity: 0;
-    transform: translate(0, -1000%); } }
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1,
+.theback h1 {
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center; }
 
+.thefront p,
+.theback p {
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center; }
+
+/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 /* Header */
 #showcase {
   height: calc(100vh);
@@ -451,11 +494,18 @@ input:checked ~ .modal__overlay {
   background-image: url("../img/tools.jpg");
   background-color: #00b7ff;
   background-blend-mode: darken; }
+  #section-b .content-wrap {
+    display: flex;
+    justify-content: space-between; }
   #section-b .myicon {
     width: calc(80px + (160 - 80) * ((100vw - 300px) / (1600 - 300)));
     height: calc(54px + (108 - 54) * ((100vw - 300px) / (1600 - 300))); }
   #section-b .skillset {
     padding: 3em 0; }
+  #section-b .skills-holder {
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%; }
   #section-b ul {
     margin: 0;
     display: grid;
@@ -464,7 +514,7 @@ input:checked ~ .modal__overlay {
     padding: 0 0.5em; }
   #section-b li {
     margin-bottom: 1em;
-    background: #fff;
+    background: #e5f7ff;
     color: #00364c;
     border-radius: 5%;
     transition: all 0.30s ease-out; }
