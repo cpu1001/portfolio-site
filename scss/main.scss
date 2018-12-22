@@ -4,14 +4,10 @@
 @import "paralax";
 @import "modal";
 @import "galerymodal";
-@import "cardflip";
 
 
 /* Header */
-
-
-
-#showcase {
+c #showcase {
   height: calc(100vh);
   position: relative;
   background-image: linear-gradient(to top right, #000, $darker);
