@@ -34,40 +34,52 @@ function toggleMenu() {
   }
 }
 
-const layer1 = document.getElementById("l1");
-const layer2 = document.getElementById("l2");
-const layer3 = document.getElementById("l3");
-const layer4 = document.getElementById("l4");
-
-window.addEventListener("load", turnOffParalax);
-window.addEventListener("resize", turnOffParalax);
-
-function turnOffParalax() {
-  const w =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  if (w < 700) {
-    layer1.classList.remove("layer");
-    layer2.classList.remove("layer");
-    layer3.classList.remove("layer");
-    layer4.classList.remove("layer");
-  } else if (w > 700) {
-    layer1.classList.add("layer");
-    layer2.classList.add("layer");
-    layer3.classList.add("layer");
-    layer4.classList.add("layer");
-  }
-}
-
 const pItems = document.querySelectorAll(".p-item");
 const pClicks = document.querySelectorAll(".pclick");
 
 for (var i = 0; i < pClicks.length; i++) {
-  (function(index) {
-    pClicks[i].onclick = function() {
+  (function (index) {
+    pClicks[i].onclick = function () {
       pItems.forEach(item => item.classList.remove("showme"));
       pItems[index].classList.add("showme");
+      pItems[index].firstChild.firstChild.style.display = "block";
+
+      var c = pItems[index].firstChild.children;
+      var k;
+      for (k = 1; k <= c.length; k++) {
+        c[k].style.display = "none";
+        console.log('broj ' + k);
+        if (k == c.length) {}
+      };
+
     };
   })(i);
+}
+
+
+/* Slider stuff */
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  //var x = document.getElementsByClassName("mySlides");
+  var x = event.target.parentNode.firstChild.children;
+  //console.log(x);
+
+  if (n > x.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = x.length
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex - 1].style.display = "block";
 }

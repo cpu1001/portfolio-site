@@ -4,6 +4,7 @@
 @import "paralax";
 @import "modal";
 @import "galerymodal";
+@import "portfolio-carousel";
 
 
 /* Header */
@@ -89,6 +90,26 @@
     justify-content: center;
     align-items: center;
 
+    .experience {
+
+
+      h4 {
+        margin: 0.8em 0;
+        font-weight: normal;
+      }
+
+      .exp-item {
+        margin: 20px 0;
+
+        h5 {
+          font-weight: normal;
+        }
+
+        p {
+          font-size: 0.8em;
+        }
+      }
+    }
 
     ul.services {
       text-align: center;

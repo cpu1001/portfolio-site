@@ -29,14 +29,84 @@
   text-shadow: none;
   top: 0;
   z-index: 600;
+  display: grid;
 }
 
 .modal__wrap {
-  padding: 1em 0;
+  padding: 0;
   position: relative;
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 700px;
   width: 90%;
+  background-color: $white;
+  align-self: center;
+  justify-self: center;
+
+  &.contactWrap {
+    background-color: unset;
+    max-width: 600px;
+  }
+
+
+
+  h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+
+    small {
+      font-size: 0.45em;
+      font-weight: 200;
+      line-height: 1em;
+
+      &::before {
+        margin: 3em 0 0 -5em;
+      }
+
+      &::after {
+        margin: -3em 0 0 0;
+        right: 0;
+      }
+
+      &::before,
+      &::after {
+        content: "_________";
+        font-size: 0.3em;
+        color: #fff;
+        display: table-cell;
+        padding: 0 1.5em;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  p {
+    color: $dark;
+    //  text-align: center;
+    margin: 0.5em 0;
+  }
+
+  .p-desc {
+    padding: 20px;
+    text-align: left;
+
+    h3 {
+      color: $black;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    hr {
+      width: 100%;
+      height: 1px;
+      background-color: #1B242F;
+      display: block;
+      border: none;
+      margin: 15px 0;
+
+
+    }
+  }
 }
 
 .modal label {
@@ -54,42 +124,8 @@
   width: 1.5em;
 }
 
-.modal__wrap h2 {
-  font-size: 3em;
-  text-transform: uppercase;
-  padding-bottom: 0px;
 
-  small {
-    font-size: 0.45em;
-    font-weight: 200;
-    line-height: 1em;
 
-    &::before {
-      margin: 3em 0 0 -5em;
-    }
-
-    &::after {
-      margin: -3em 0 0 0;
-      right: 0;
-    }
-
-    &::before,
-    &::after {
-      content: "_________";
-      font-size: 0.3em;
-      color: #fff;
-      display: table-cell;
-      padding: 0 1.5em;
-      vertical-align: middle;
-    }
-  }
-}
-
-.modal__wrap p {
-  color: $highlight1;
-  text-align: center;
-  margin: 0.5em;
-}
 
 .modal input,
 .modal textarea {
@@ -119,7 +155,7 @@
   z-index: -100;
 }
 
-input:checked ~ .modal__overlay {
+input:checked~.modal__overlay {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   z-index: 800;
@@ -132,5 +168,4 @@ input:checked ~ .modal__overlay {
   width: 8em !important;
 }
 
-@media (max-width: 699px) {
-}
+@media (max-width: 699px) {}

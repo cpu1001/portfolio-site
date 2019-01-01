@@ -244,14 +244,58 @@ section#showcase {
   text-align: center;
   text-shadow: none;
   top: 0;
-  z-index: 600; }
+  z-index: 600;
+  display: grid; }
 
 .modal__wrap {
-  padding: 1em 0;
+  padding: 0;
   position: relative;
   margin: 0 auto;
-  max-width: 500px;
-  width: 90%; }
+  max-width: 700px;
+  width: 90%;
+  background-color: #ffffff;
+  align-self: center;
+  justify-self: center; }
+  .modal__wrap.contactWrap {
+    background-color: unset;
+    max-width: 600px; }
+  .modal__wrap h2 {
+    font-size: 3em;
+    text-transform: uppercase; }
+    .modal__wrap h2 small {
+      font-size: 0.45em;
+      font-weight: 200;
+      line-height: 1em; }
+      .modal__wrap h2 small::before {
+        margin: 3em 0 0 -5em; }
+      .modal__wrap h2 small::after {
+        margin: -3em 0 0 0;
+        right: 0; }
+      .modal__wrap h2 small::before, .modal__wrap h2 small::after {
+        content: "_________";
+        font-size: 0.3em;
+        color: #fff;
+        display: table-cell;
+        padding: 0 1.5em;
+        vertical-align: middle; }
+  .modal__wrap p {
+    color: #00364c;
+    margin: 0.5em 0; }
+  .modal__wrap .p-desc {
+    padding: 20px;
+    text-align: left; }
+    .modal__wrap .p-desc h3 {
+      color: #001219;
+      text-align: left;
+      margin: 0;
+      padding: 0; }
+    .modal__wrap .p-desc hr {
+      width: 100%;
+      height: 1px;
+      background-color: #1B242F;
+      display: block;
+      border: none;
+      margin: 15px 0; }
 
 .modal label {
   background: #fff;
@@ -266,32 +310,6 @@ section#showcase {
   right: 2.1em;
   top: 1.8em;
   width: 1.5em; }
-
-.modal__wrap h2 {
-  font-size: 3em;
-  text-transform: uppercase;
-  padding-bottom: 0px; }
-  .modal__wrap h2 small {
-    font-size: 0.45em;
-    font-weight: 200;
-    line-height: 1em; }
-    .modal__wrap h2 small::before {
-      margin: 3em 0 0 -5em; }
-    .modal__wrap h2 small::after {
-      margin: -3em 0 0 0;
-      right: 0; }
-    .modal__wrap h2 small::before, .modal__wrap h2 small::after {
-      content: "_________";
-      font-size: 0.3em;
-      color: #fff;
-      display: table-cell;
-      padding: 0 1.5em;
-      vertical-align: middle; }
-
-.modal__wrap p {
-  color: #ffff99;
-  text-align: center;
-  margin: 0.5em; }
 
 .modal input,
 .modal textarea {
@@ -351,68 +369,9 @@ input:checked ~ .modal__overlay {
 .showme {
   display: block; }
 
-/* THE CARD HOLDS THE FRONT AND BACK FACES */
-.thecard {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transform-style: preserve-3d;
-  transition: all 0.30s ease-out; }
+.mySlides {
+  display: none; }
 
-/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
-.thecard:hover {
-  transform: rotateY(180deg);
-  transition: all 0.30s ease-out; }
-
-/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
-.thefront {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #ffc728;
-  color: #000; }
-
-/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
-.theback {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg); }
-
-/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-.thefront h1,
-.theback h1 {
-  font-family: 'zilla slab', sans-serif;
-  padding: 30px;
-  font-weight: bold;
-  font-size: 24px;
-  text-align: center; }
-
-.thefront p,
-.theback p {
-  font-family: 'zilla slab', sans-serif;
-  padding: 30px;
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center; }
-
-/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 /* Header */
 #showcase {
   height: calc(100vh);
@@ -477,6 +436,15 @@ input:checked ~ .modal__overlay {
     display: flex;
     justify-content: center;
     align-items: center; }
+    #section-a .content-wrap .experience h4 {
+      margin: 0.8em 0;
+      font-weight: normal; }
+    #section-a .content-wrap .experience .exp-item {
+      margin: 20px 0; }
+      #section-a .content-wrap .experience .exp-item h5 {
+        font-weight: normal; }
+      #section-a .content-wrap .experience .exp-item p {
+        font-size: 0.8em; }
     #section-a .content-wrap ul.services {
       text-align: center; }
       #section-a .content-wrap ul.services li {
