@@ -5,6 +5,7 @@
 @import "modal";
 @import "galerymodal";
 @import "portfolio-carousel";
+@import "animatecss";
 
 
 /* Header */
@@ -81,7 +82,7 @@
 #section-a {
   background-color: #fff;
   @include borderTop;
-  color: $dark;
+  color: $black;
 
   .content-wrap {
     padding: 0 0.5em;
@@ -91,23 +92,43 @@
     align-items: center;
 
     .experience {
+      text-align: center;
 
 
-      h4 {
-        margin: 0.8em 0;
+      h3 {
+        margin: 0.8em 0 0.2em 0;
         font-weight: normal;
+        font-size: 1.6em;
+      }
+
+      hr {
+        margin-bottom: 1.4em;
       }
 
       .exp-item {
-        margin: 20px 0;
+        margin: 0 0 30px 0;
+        padding: 0.5em 0;
 
-        h5 {
-          font-weight: normal;
+
+        h4 {
+          font-weight: 200;
+          color: $darker;
+          font-size: 1em;
+          margin-bottom: 0.4em;
         }
 
         p {
-          font-size: 0.8em;
+          line-height: 2em;
+
+          span.role {
+            font-size: 1.3em;
+          }
+
+          span.company {
+            color: $gray;
+          }
         }
+
       }
     }
 

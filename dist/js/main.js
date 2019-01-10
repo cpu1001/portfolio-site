@@ -48,7 +48,6 @@ for (var i = 0; i < pClicks.length; i++) {
       var k;
       for (k = 1; k <= c.length; k++) {
         c[k].style.display = "none";
-        console.log('broj ' + k);
         if (k == c.length) {}
       };
 

@@ -11,6 +11,9 @@
 
     <script src="https://unpkg.com/vue"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -90,7 +93,7 @@
         </div>
 
         <div class="content-wrap">
-            <div class="itsme">
+            <div class="itsme wow fadeInDown" data-wow-duration="0.6s" data-wow-delay="0.2s">
                 <h1>
                     <small class="thinker">Vlad Stanković</small> Front-End Developer<br>
                     UI/UX Designer & <br>
@@ -115,10 +118,10 @@
     <section id="section-a" class="grid sectionblock">
         <div class="content-wrap">
             <div class="about-holder">
-                <h2 class="content-title">About me</h2>
-                <hr />
+                <h2 class="content-title wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.0s">About me
+                </h2>
                 <ul class="services">
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                         <svg class="myicon i-leaf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.4 53.9">
                             <g fill="none" stroke="#1D1D1F" stroke-width="1" stroke-miterlimit="10">
                                 <polyline class="leaf-left" points="40.7,3.5 29.2,14.7 34.2,19.2 24.2,28.9 39.7,42.8"></polyline>
@@ -130,7 +133,7 @@
                         </svg>
                         <h5 class="le-title">Product Design</h5>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                         <svg class="myicon i-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.4 53.9">
                             <g fill="none" stroke="#1D1D1F" stroke-width="1" stroke-linejoin="bevel" stroke-miterlimit="10">
                                 <path class="wave-1" d="M19.2,18.1c8.8,0,10.2-7.8,10.2-7.8c0,0,1.4,7.8,10.2,7.8s10.2-7.8,10.2-7.8s1.4,7.8,10.2,7.8"></path>
@@ -140,7 +143,7 @@
                         </svg>
                         <h5 class="le-title">UX Design</h5>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
                         <svg class="myicon i-wind" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.4 53.9">
                             <g fill="none" stroke="#1D1D1F" stroke-width="1" stroke-miterlimit="10">
                                 <path class="wind-1" d="M57.6,24.3c-0.6-1.2-1-2.6-1-4.1c0-5,4-9,9-9c5,0,9,4,9,9s-4,9-9,9l-61.1,0"></path>
@@ -150,7 +153,7 @@
                         </svg>
                         <h5 class="le-title">Prototyping</h5>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.4s">
                         <svg class="myicon i-mountain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.4 53.9">
                             <g fill="none" stroke="#1D1D1F" stroke-width="1" stroke-miterlimit="10">
                                 <polygon class="mountain-small" points="32.3,46.5 4.7,46.5 18.5,28.1 32.3,46.5	"></polygon>
@@ -160,7 +163,7 @@
                         </svg>
                         <h5 class="le-title">Development</h5>
                     </li>
-                    <li>
+                    <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                         <svg class="myicon i-fether" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.4 53.9">
                             <g fill="none" stroke="#1D1D1F" stroke-width="1" stroke-miterlimit="10">
                                 <path class="outline-left" d="M39.6,42.3L39.6,42.3c-4.4,0-8.1-3.6-8.1-8.1V13.5c0-4.4,8.1-9.4,8.1-9.4"></path>
@@ -176,11 +179,11 @@
                     </li>
                 </ul>
                 <div class="content-text">
-                    <p>
+                    <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">
                         I'm a freelance creative front‑end developer and team leader. I enjoy collaborating with
                         multi-disciplinary groups to solve complex problems and create intuitive experiences.
                     </p>
-                    <p>
+                    <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
                         My services include product design - from wireframing and prototyping, to interface design and
                         front-end
                         development. I’m interested in clean aesthetics, minimalism,
@@ -190,28 +193,41 @@
                         of creative teams.
                     </p>
                     <div class="experience">
-                        <h4>Experience:</h4>
-                        <div class="exp-item">
-                            <h5>2012 - 2018</h5>
-                            <p>CTO / Front End Developer at Meltdown Challenge LLC</p>
+                        <h3 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Experience</h3>
+                        <hr />
+                        <div class="exp-item wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <h4>2012 - 2018</h4>
+                            <p>
+                                <span class="role">CTO / Front-End Developer</span> <br>
+                                <span class="company">at Meltdown Challenge LLC</span>
+                            </p>
                         </div>
-                        <div class="exp-item">
-                            <h5>2011 - 2012</h5>
-                            <p>Head of Front End Development at Inflorescence LLC</p>
+                        <div class="exp-item wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <h4>2011 - 2012</h4>
+                            <p>
+                                <span class="role">Head of Front-End Development</span> <br>
+                                <span class="company">at Inflorescence LLC</span></p>
                         </div>
-                        <div class="exp-item">
-                            <h5>2010 - 2011</h5>
-                            <p>Web Designer - Front End Developer at Ceesco.net</p>
+                        <div class="exp-item wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <h4>2010 - 2011</h4>
+                            <p>
+                                <span class="role">Web Designer / Front-End Developer</span> <br>
+                                <span class="company">at Ceesco.net</span>
+                            </p>
                         </div>
-                        <div class="exp-item">
-                            <h5>2007 - 2010</h5>
-                            <p>Web Designer at IT Leskovac</p>
+                        <div class="exp-item wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <h4>2007 - 2010</h4>
+                            <p>
+                                <span class="role">Web Designer / Front-End Developer</span> <br>
+                                <span class="company">at IT Leskovac</span>
+                            </p>
                         </div>
                     </div>
 
 
                 </div>
-                <button class="btn btn-resume">Download Resume</button>
+                <button class="btn btn-resume wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Download
+                    Resume</button>
             </div>
         </div>
     </section>
@@ -226,83 +242,82 @@
                 <div class="skillset">
 
                     <ul>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0s">
                             <div class="card">
                                 <img src="img/html.png" alt="" />
 
                                 <h3 class="card-title">HTML</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                             <div class="card">
                                 <img src="img/css.png" alt="" />
 
                                 <h3 class="card-title">CSS</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                             <div class="card">
                                 <img src="img/sass.png" alt="" />
 
                                 <h3 class="card-title">Sass</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
                             <div class="card">
                                 <img src="img/js.png" alt="" />
 
                                 <h3 class="card-title">JavaScript</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.4s">
                             <div class="card">
                                 <img src="img/vue.png" alt="" />
 
                                 <h3 class="card-title">Vue.js</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                             <div class="card">
                                 <img src="img/node.png" alt="" />
 
                                 <h3 class="card-title">Node.js</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">
                             <div class="card">
                                 <img src="img/git.png" alt="" />
 
                                 <h3 class="card-title">Git</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.7s">
                             <div class="card">
                                 <img src="img/npm.png" alt="" />
 
                                 <h3 class="card-title">Npm</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.8s">
                             <div class="card">
                                 <img src="img/webpack.png" alt="" />
                                 <h3 class="card-title">Webpack</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.9s">
                             <div class="card">
-
                                 <img src="img/bootstrap-stack.png" alt="" />
                                 <h3 class="card-title">Bootstrap</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1s">
                             <div class="card">
                                 <img src="img/proto.png" alt="" />
 
                                 <h3 class="card-title">Proto.io</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.1s">
                             <div class="card">
                                 <img src="img/wp.png" alt="" />
 
@@ -310,21 +325,21 @@
                             </div>
                         </li>
 
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.2s">
                             <div class="card">
                                 <img src="img/json.png" alt="" />
 
                                 <h3 class="card-title">JSON</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.3s">
                             <div class="card">
                                 <img src="img/adobe.png" alt="" />
 
                                 <h3 class="card-title">Design</h3>
                             </div>
                         </li>
-                        <li>
+                        <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1.4s">
                             <div class="card">
                                 <img src="img/unity.png" alt="" />
                                 <h3 class="card-title">Unity / C#</h3>
@@ -347,8 +362,14 @@
             <label for="portfolio">&#10006;</label>
             <div id="p-holder" class="modal__wrap">
                 <div v-for="item in myItems" class="p-item">
-                    <div class="kompir">
+                    <div class="slides">
                         <img class="mySlides" v-for="slide in item.img" v-bind:src="slide" alt="">
+                    </div>
+                    <div class="portfolio-arrow arrow-left" onclick="plusDivs(-1)">
+
+                    </div>
+                    <div class="portfolio-arrow arrow-right" onclick="plusDivs(1)">
+
                     </div>
                     <div class="p-desc">
                         <h3>{{ item.name }}</h3>
@@ -357,8 +378,7 @@
                             {{ item.description }}
                         </p>
                     </div>
-                    <button onclick="plusDivs(-1)">PLUS</button>
-                    <button onclick="plusDivs(1)">MINUS</button>
+
                 </div>
 
             </div>
@@ -367,47 +387,11 @@
     <!-- Portfolio Item Modal -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Section C - PORTFOLIO -->
 
     <section id="section-c" class="grid">
         <ul>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/btc-01.jpg" alt="" />
@@ -417,7 +401,7 @@
                     </label>
                 </div>
             </li>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/bl-01.jpg" alt="" />
@@ -427,7 +411,7 @@
                     </label>
                 </div>
             </li>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/mn-01.jpg" alt="" />
@@ -437,7 +421,7 @@
                     </label>
                 </div>
             </li>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.4s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/cc-01.jpg" alt="" />
@@ -447,7 +431,7 @@
                     </label>
                 </div>
             </li>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/dp-01.jpg" alt="" />
@@ -457,7 +441,7 @@
                     </label>
                 </div>
             </li>
-            <li>
+            <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
                         <img src="img/portfolio/bl-01.jpg" alt="" />
@@ -471,7 +455,7 @@
     </section>
 
     <!-- Section D -->
-    <section id="section-d" class="grid sectionblock">
+    <section id="section-d" class="grid sectionblock wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
         <label for="modal__trigger" class="btn roundingBtn">Contact me</label>
     </section>
     <!-- Start of Contact Modal -->
@@ -487,18 +471,37 @@
                 <p id="modal__desc">
                     Looking for inspiration or want to discuss an idea?
                 </p>
-                <form id="myForm" action="#" method="post">
-                    <div>
-                        <input id="form-name" type="text" value="Name" />
-                        <input id="form-email" type="text" value="Email" />
-                    </div>
 
+                <!-- Start code for the form-->
+                <form id="myForm" method="post" name="myemailform" action="form-to-email.php">
                     <div>
-                        <textarea id="form-message" cols="40" rows="8" name="textarea"></textarea>
+                        <input type="text" name="name" value="Name">
                     </div>
-
-                    <div><input class="formBtn" type="submit" value="Submit" /></div>
+                    <div>
+                        <input type="text" name="email" value="Email">
+                    </div>
+                    <div>
+                        <textarea name="message" cols="40" rows="8"></textarea>
+                    </div>
+                    <div>
+                        <div class="g-recaptcha" data-sitekey="6LcrToYUAAAAAMqxtQygRRstv3ICrZzhCA98Goyp"></div>
+                        <br />
+                        <input class="formBtn" type="submit" value="Submit" name='submit' />
+                    </div>
                 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     </div>
@@ -507,7 +510,7 @@
 
 
     <!-- Footer -->
-    <footer id="main-footer" class="grid">
+    <footer id="main-footer" class="grid wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
         <div class="footer-left">
             © 2018 <a href="http://vladislav.rs">Vladislav.rs</a> | All rights
             reserved.
@@ -517,9 +520,15 @@
         </div>
     </footer>
 
-
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+
 </body>
 
 </html>
