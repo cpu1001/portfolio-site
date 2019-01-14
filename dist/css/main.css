@@ -141,6 +141,9 @@ header {
     transition: all 0.30s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
+    .menu-nav .ico-tilt {
+      color: #ffffff;
+      margin-bottom: 0.5em; }
   .menu-branding {
     width: 100%;
     position: absolute;
@@ -159,7 +162,7 @@ header {
       opacity: 1;
       transition: all 0.30s ease-out; }
     .menu .nav-item a {
-      color: #fff;
+      color: #ffffff;
       display: block;
       text-decoration: none; }
       .menu .nav-item a hr {
@@ -177,8 +180,6 @@ header {
     transition: all 0.30s ease-out; }
     .menu .nav-link:hover {
       color: #ffff99; }
-    .menu .nav-link li.soc-icons {
-      display: inline-block; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.4s; }
@@ -3303,6 +3304,27 @@ input:checked ~ .modal__overlay {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1em; } }
+
+.contact-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  width: 80%; }
+  .contact-icons li {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto; }
+    .contact-icons li a {
+      color: #ffffff; }
+    .contact-icons li i {
+      transition: all 0.30s ease-out; }
+    .contact-icons li:hover i {
+      -ms-transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+      -webkit-transform: rotate(20deg);
+      -o-transform: rotate(20deg);
+      transform: rotate(20deg);
+      transition: all 0.30s ease-out; }
 
 .mouse {
   max-width: 2.5rem;

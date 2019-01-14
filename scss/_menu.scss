@@ -79,6 +79,11 @@
     &.show {
       transform: translate3d(0, 0, 0);
     }
+
+    .ico-tilt {
+      color: $white;
+      margin-bottom: 0.5em;
+    }
   }
 
   // Logo side
@@ -108,7 +113,7 @@
     }
 
     a {
-      color: #fff;
+      color: $white;
       display: block;
       text-decoration: none;
 
@@ -134,10 +139,6 @@
 
     &:hover {
       color: $highlight1;
-    }
-
-    li.soc-icons {
-      display: inline-block;
     }
   }
 }

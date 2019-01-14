@@ -7,18 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Vladislav Stanković : Creative Front-End Developer</title>
     <link rel="stylesheet" href="css/main.css" />
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
     <script src="https://unpkg.com/vue"></script>
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
-
-
 </head>
 
 <body>
-
     <!-- Header / Nav -->
     <header>
         <div class="menu-btn">
@@ -56,16 +51,24 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#section-d" class="nav-link">
-                        Contact
+                    <a href="mailto:hello@vladislav.rs" subject="Hello Vlad!" class="nav-link">
+                        hello@vladislav.rs
                         <hr />
                     </a>
                 </li>
-                <li class="nav-item soc-icons">
-                    <a href="#"><i class="fab fa-linkedin x3"></i></a>
-                    <a href="#"><i class="fab fa-twitter x3"></i></a>
-                    <a href="#"><i class="fas fa-envelope x3"></i></a>
+                <li>
+                    <a href="https://twitter.com/vlad10019">
+                        <i class="ico-tilt fab fa-twitter-square fa-2x"></i><br>
+
+                    </a>
                 </li>
+                <li>
+                    <a href="https://linkedin.com/in/vlad-stankovic/">
+                        <i class="ico-tilt fab fa-linkedin fa-2x"></i><br>
+
+                    </a>
+                </li>
+
             </ul>
         </nav>
     </header>
@@ -394,7 +397,7 @@
             <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.1s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
-                        <img src="img/portfolio/btc-01.jpg" alt="" />
+                        <img src="img/portfolio/btc-00.jpg" alt="" />
                         <div class="card-content">
                             <h3 class="card-title">Easy BTC Invest</h3>
                         </div>
@@ -404,7 +407,7 @@
             <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
-                        <img src="img/portfolio/bl-01.jpg" alt="" />
+                        <img src="img/portfolio/bl-00.jpg" alt="" />
                         <div class="card-content">
                             <h3 class="card-title">Botan Labs - Liver Extra</h3>
                         </div>
@@ -414,7 +417,7 @@
             <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
-                        <img src="img/portfolio/mn-01.jpg" alt="" />
+                        <img src="img/portfolio/mn-00.jpg" alt="" />
                         <div class="card-content">
                             <h3 class="card-title">Botan Labs - Moony 600</h3>
                         </div>
@@ -424,7 +427,7 @@
             <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.4s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
-                        <img src="img/portfolio/cc-01.jpg" alt="" />
+                        <img src="img/portfolio/cc-00.jpg" alt="" />
                         <div class="card-content">
                             <h3 class="card-title">Botan Labs - Curcumin</h3>
                         </div>
@@ -434,7 +437,7 @@
             <li class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <div class="card">
                     <label class="pclick" for="portfolio">
-                        <img src="img/portfolio/dp-01.jpg" alt="" />
+                        <img src="img/portfolio/dp-00.jpg" alt="" />
                         <div class="card-content">
                             <h3 class="card-title">Diamond Protect</h3>
                         </div>
@@ -454,60 +457,6 @@
         </ul>
     </section>
 
-    <!-- Section D -->
-    <section id="section-d" class="grid sectionblock wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
-        <label for="modal__trigger" class="btn roundingBtn">Contact me</label>
-    </section>
-    <!-- Start of Contact Modal -->
-    <div class="modal">
-        <input class="moveaway" id="modal__trigger" type="checkbox" />
-        <div class="modal__overlay" role="dialog" aria-labelledby="modal__title" aria-describedby="modal_desc">
-            <label for="modal__trigger">&#10006;</label>
-            <div class="modal__wrap contactWrap ">
-                <h2 id="modal__title">
-                    Say Hello <br />
-                    <small>Drop me a line</small>
-                </h2>
-                <p id="modal__desc">
-                    Looking for inspiration or want to discuss an idea?
-                </p>
-
-                <!-- Start code for the form-->
-                <form id="myForm" method="post" name="myemailform" action="form-to-email.php">
-                    <div>
-                        <input type="text" name="name" value="Name">
-                    </div>
-                    <div>
-                        <input type="text" name="email" value="Email">
-                    </div>
-                    <div>
-                        <textarea name="message" cols="40" rows="8"></textarea>
-                    </div>
-                    <div>
-                        <div class="g-recaptcha" data-sitekey="6LcrToYUAAAAAMqxtQygRRstv3ICrZzhCA98Goyp"></div>
-                        <br />
-                        <input class="formBtn" type="submit" value="Submit" name='submit' />
-                    </div>
-                </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
-    </div>
-    <!-- End of Contact Modal -->
-
-
 
     <!-- Footer -->
     <footer id="main-footer" class="grid wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
@@ -515,8 +464,10 @@
             © 2018 <a href="http://vladislav.rs">Vladislav.rs</a> | All rights
             reserved.
         </div>
+
+
         <div class="footer-right">
-            [ <a href="mailto:contact@vladislav.rs">contact@vladislav.rs</a> ]
+            [ <a href="mailto:hello@vladislav.rs" subject="Hello Vlad!">hello@vladislav.rs</a> ]
         </div>
     </footer>
 
