@@ -3202,8 +3202,7 @@ input:checked ~ .modal__overlay {
 
 /* Footer  */
 #main-footer {
-  background: #00364c;
-  border-top: #212121 1px solid;
+  background: #001219;
   color: #999;
   padding: 2em;
   font-size: 0.8em; }
