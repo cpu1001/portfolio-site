@@ -86,7 +86,8 @@
   }
 
   .p-desc {
-    padding: 20px;
+    border-top: 2px solid $black;
+    padding: 20px 30px;
     text-align: left;
 
     h3 {
@@ -99,10 +100,10 @@
     hr {
       width: 100%;
       height: 1px;
-      background-color: #1B242F;
+      background-color: $gray;
       display: block;
       border: none;
-      margin: 15px 0;
+      margin: 5px 0;
 
 
     }

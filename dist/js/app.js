@@ -34,18 +34,20 @@ var app = new Vue({
                 description: 'I was hired to do the design and front end development for new product by Botan Labs. I worked with their dev team to incorporate custom built shopping cart features and the result was pretty awesome.'
             },
             {
+                name: 'Meltdown Challenge',
+                img: [
+                    'img/portfolio/mdc-02.jpg',
+                    'img/portfolio/mdc-01.jpg',
+                    'img/portfolio/mdc-03.jpg'
+                ],
+                description: 'DiamondProtect is a High-Tech Glasses Protection suitable for all types of glasses. I was hired to design the new look for their website to show off their display and glasses protection products.'
+            },
+            {
                 name: 'Diamond Protect',
                 img: [
                     'img/portfolio/dp-01.jpg'
                 ],
                 description: 'DiamondProtect is a High-Tech Glasses Protection suitable for all types of glasses. I was hired to design the new look for their website to show off their display and glasses protection products.'
-            },
-            {
-                name: 'item 6',
-                img: [
-                    'img/portfolio/dp-01.jpg'
-                ],
-                description: 'neki tamo kompir desc...444'
             }
 
         ]

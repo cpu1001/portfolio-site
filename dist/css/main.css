@@ -79,8 +79,13 @@ header {
     color: #000; }
   .btn.btn-resume {
     color: #00364c;
-    border-color: #00364c;
+    border-color: #00b7ff;
+    font-weight: 300;
     margin: 1.5em auto 2.5em; }
+    .btn.btn-resume:hover {
+      color: #ffffff;
+      background-color: #00b7ff;
+      border-color: #00b7ff; }
   .btn:hover {
     background-color: #4cccff;
     transition: all 0.30s ease-out; }
@@ -283,7 +288,8 @@ section#showcase {
     color: #00364c;
     margin: 0.5em 0; }
   .modal__wrap .p-desc {
-    padding: 20px;
+    border-top: 2px solid #001219;
+    padding: 20px 30px;
     text-align: left; }
     .modal__wrap .p-desc h3 {
       color: #001219;
@@ -293,10 +299,10 @@ section#showcase {
     .modal__wrap .p-desc hr {
       width: 100%;
       height: 1px;
-      background-color: #1B242F;
+      background-color: #a2a2a2;
       display: block;
       border: none;
-      margin: 15px 0; }
+      margin: 5px 0; }
 
 .modal label {
   background: #fff;
@@ -3060,11 +3066,12 @@ input:checked ~ .modal__overlay {
     #section-a .content-wrap .experience {
       text-align: center; }
       #section-a .content-wrap .experience h3 {
-        margin: 0.8em 0 0.2em 0;
+        margin: 1.3em 0 0.5em 0;
         font-weight: normal;
-        font-size: 1.6em; }
-      #section-a .content-wrap .experience hr {
-        margin-bottom: 1.4em; }
+        font-size: 1.8em; }
+        #section-a .content-wrap .experience h3 hr {
+          width: 7em;
+          margin-bottom: 1.4em; }
       #section-a .content-wrap .experience .exp-item {
         margin: 0 0 30px 0;
         padding: 0.5em 0; }
@@ -3149,7 +3156,7 @@ input:checked ~ .modal__overlay {
 
 .card:hover .card-content {
   height: 100%;
-  background-color: rgba(0, 18, 25, 0.4); }
+  background-color: #ffffff; }
 
 .card-content {
   position: absolute;
@@ -3162,14 +3169,29 @@ input:checked ~ .modal__overlay {
   height: 0;
   transition: all 0.30s ease-out; }
   .card-content h3 {
-    color: white;
+    color: #001219;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center; }
+    .card-content h3 small {
+      text-transform: uppercase;
+      font-weight: 300;
+      border: 2px solid #00b7ff;
+      color: #001219;
+      display: block;
+      width: 12em;
+      margin: 1.5em auto 0;
+      padding: 0.6em;
+      transition: all 0.30s ease-out; }
+      .card-content h3 small:hover {
+        color: #ffffff;
+        background-color: #00b7ff;
+        transition: all 0.30s ease-out; }
 
 /* Section D - Contact */
 #section-d {
@@ -3203,6 +3225,7 @@ input:checked ~ .modal__overlay {
 /* Footer  */
 #main-footer {
   background: #001219;
+  border-top: 2px solid #0080b2;
   color: #999;
   padding: 2em;
   font-size: 0.8em; }
@@ -3211,11 +3234,15 @@ input:checked ~ .modal__overlay {
     color: #ffff99; }
   #main-footer .footer-left,
   #main-footer .footer-right {
-    padding: 0.5em 0; }
+    padding: 1em 0;
+    font-size: 18px; }
   #main-footer .footer-left {
     text-align: left; }
   #main-footer .footer-right {
     text-align: right; }
+    #main-footer .footer-right ul li {
+      display: inline-block;
+      padding: 0.5em; }
 
 /* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
 /* Media Queries  Media Queries  Media Queries  Media Queries  Media Queries */
