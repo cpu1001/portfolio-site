@@ -1,5 +1,20 @@
+.slides {
+    // display: table;
+
+}
+
 .mySlides {
-    display: none;
+    opacity: 0;
+    @include easeOut;
+    position: absolute;
+    transform: translate3d(0, -100%, 0);
+
+    &.slideme {
+        opacity: 1;
+        //position: relative;
+
+    }
+
 }
 
 .portfolio-arrow {

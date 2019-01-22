@@ -35,7 +35,7 @@
 .modal__wrap {
   padding: 0;
   position: relative;
-  margin: 0 auto;
+  margin: 40vh auto 0;
   max-width: 700px;
   width: 90%;
   background-color: $white;
@@ -86,7 +86,7 @@
   }
 
   .p-desc {
-    border-top: 2px solid $black;
+    border-top: 3px solid $black;
     padding: 20px 30px;
     text-align: left;
 

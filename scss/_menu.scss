@@ -74,10 +74,12 @@
     background-color: $seeThruDark2;
     list-style: none;
     transform: translate3d(0, -100%, 0);
+    -ms-transform: translateX(0) translateY(100%) translateZ(0);
     @include easeOut;
 
     &.show {
       transform: translate3d(0, 0, 0);
+      -ms-transform: translateX(0) translateY(0) translateZ(0);
     }
 
     .ico-tilt {
@@ -103,14 +105,8 @@
   }
 
   .nav-item {
-    opacity: 0;
-    @include easeOut;
+    opacity: 1;
     color: #fff;
-
-    &.show {
-      opacity: 1;
-      @include easeOut;
-    }
 
     a {
       color: $white;
@@ -124,10 +120,6 @@
         width: 2em;
       }
     }
-
-    &.current>a {
-      color: $highlight1;
-    }
   }
 
   .nav-link {
@@ -140,14 +132,6 @@
     &:hover {
       color: $highlight1;
     }
-  }
-}
-
-// deilay for nav items
-
-@for $i from 1 through 4 {
-  .nav-item:nth-child(#{$i}) {
-    transition-delay: $i * 0.4s;
   }
 }
 

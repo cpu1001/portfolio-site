@@ -6,7 +6,7 @@
 @import "galerymodal";
 @import "portfolio-carousel";
 @import "animatecss";
-
+@import "iefixes";
 
 /* Header */
 #showcase {
@@ -175,6 +175,10 @@
   .skillset {
     //grid-column: 2/4;
     padding: 3em 0;
+  }
+
+  h3.card-title {
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
 
   }
 
@@ -189,6 +193,8 @@
   ul {
     margin: 0;
     display: grid;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1em;
     padding: 0 0.5em;
@@ -203,6 +209,7 @@
 
     h3 {
       padding: 0.3em 0 1em 0;
+
     }
 
     &:hover {
@@ -350,8 +357,9 @@
     font-size: 18px;
   }
 
-  .footer-left {
+  .footer-left p {
     text-align: left;
+    padding: 0.5em 0;
   }
 
   .footer-right {
@@ -402,7 +410,7 @@
     }
 
     .scroll-link {
-      //display: none;
+      display: none;
     }
   }
 
@@ -421,7 +429,7 @@
   #main-footer {
 
     .footer-right,
-    .footer-left {
+    .footer-left p {
       text-align: center;
     }
   }
@@ -456,6 +464,7 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 27em)) 1fr;
+    -ms-grid-columns: 1fr repeat(2, minmax(auto, 27em)) 1fr;
   }
 
   .content-wrap,
@@ -499,18 +508,26 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 1em;
+
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   #section-c ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: 1/5;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
   }
 
   #main-footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1em;
+
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1fr;
   }
 }
 
@@ -524,6 +541,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   width: 80%;
+
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
 
   li {
     color: $white;
